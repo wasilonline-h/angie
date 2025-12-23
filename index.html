@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجي: منصة العافية والتغذية المتكاملة | عرض استثماري</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a4d2e;
+            --secondary: #2d8a5f;
+            --accent: #e8b44f;
+            --dark: #0f1419;
+            --light: #f5f7fa;
+            --text: #1a1a2e;
+            --border: #d4d4d4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: #f0c970;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(232, 180, 79, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-right: 4px solid var(--primary);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Expandable Sections */
+        .expandable {
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .expandable-header {
+            background: var(--light);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            user-select: none;
+            transition: background 0.3s;
+        }
+
+        .expandable-header:hover {
+            background: #eff0f2;
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .expandable.active .expandable-content {
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        .toggle-icon {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .expandable.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:hover {
+            background: var(--light);
+        }
+
+        /* Charts Container */
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .metric-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(26, 77, 46, 0.1), rgba(45, 138, 95, 0.1));
+            border-right: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--primary);
+        }
+
+        /* Success/Warning Badges */
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .badge-success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .badge-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        /* Print Styles */
+        @media print {
+            header, nav {
+                display: none;
+            }
+
+            section {
+                page-break-inside: avoid;
+                padding: 40px 0;
+            }
+
+            .btn {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.6s ease;
+        }
+
+        /* Slide Indicator */
+        .slide-number {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        /* Dark mode toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">🌿 إنجي</div>
+            <nav>
+                <a href="#opportunity">الفرصة</a>
+                <a href="#model">نموذج العمل</a>
+                <a href="#metrics">المؤشرات المالية</a>
+                <a href="#team">الفريق</a>
+                <a href="#investment">الاستثمار</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SLIDE 1: Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>إنجي: منصة العافية والتغذية المتكاملة</h1>
+            <p>تغذية علاجية + منتجات طبيعية + نمط حياة صحي<br>بقيادة د. إنجي كسابي</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('opportunity').scrollIntoView()">تعرّف على الفرصة</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('investment').scrollIntoView()">طلب الاستثمار</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: Executive Summary -->
+    <section class="container">
+        <h2 class="section-title">ملخص تنفيذي</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 15px;">الفرصة</h3>
+                <p>منصة متكاملة للعافية والتغذية بقيادة د. إنجي كسابي، خبيرة تغذية عالمية بخبرة 15 سنة وسجل حافل مع نجوم هوليوود والعائلات الملكية. تجمع بين الاستشارات الشخصية والوجبات الصحية والمنتجات الطبيعية.</p>
+            </div>
+            <div class="highlight-box">
+                <strong>الأرقام الأساسية:</strong><br>
+                ✓ الإيرادات السنة الأولى: 1.54 مليون دولار<br>
+                ✓ هامش الربح الإجمالي: 65%<br>
+                ✓ نسبة LTV:CAC = 40:1<br>
+                ✓ التعادل: الشهر 10-12<br>
+                ✓ طلب الاستثمار: 1 مليون دولار
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: Opportunity -->
+    <section id="opportunity" class="container">
+        <h2 class="section-title">الفرصة السوقية</h2>
+        <div class="grid-2">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 20px;">حجم السوق</h3>
+                <div class="chart-container">
+                    <div class="metric">
+                        <div class="metric-number">16.3 مليار $</div>
+                        <div class="metric-label">سوق التغذية الشخصية العالمية (2025)</div>
+                    </div>
+                    <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border);">
+                    <div class="metric">
+                        <div class="metric-number">14.3%</div>
+                        <div class="metric-label">معدل النمو السنوي المركب</div>
+                    </div>
+                    <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border);">
+                    <div class="metric">
+                        <div class="metric-number">31.9 مليار $</div>
+                        <div class="metric-label">السوق المتوقعة بحلول 2030</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 20px;">الفجوة السوقية</h3>
+                <div class="card">
+                    <strong>المشكلة:</strong>
+                    <p>لا توجد علامة تجارية متكاملة في منطقة الشرق الأوسط تجمع بين:</p>
+                    <ul style="margin: 15px 0; padding-right: 20px;">
+                        <li>المصداقية الطبية (استشارات من قبل خبراء معتمدين)</li>
+                        <li>الوجبات الصحية المعدة خصيصاً</li>
+                        <li>المنتجات الطبيعية (مستحضرات جمال، مكملات)</li>
+                        <li>النفوذ والموثوقية الشهيرة</li>
+                    </ul>
+                </div>
+                <div class="highlight-box">
+                    <strong>نافذة الفرصة:</strong> 2-3 سنوات قبل دخول المنافسين الدوليين
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: Why Now -->
+    <section class="container">
+        <h2 class="section-title">لماذا الآن؟</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>النمو الصحي في الخليج</h3>
+                <p>8-9% نمو سنوي في إنفاق العافية والتغذية الصحية في دول الخليج</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--border);">
+                    <span class="badge badge-success">تسارع سريع</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>القوة الشرائية العالية</h3>
+                <p>السكان الأثرياء في الخليج ينفقون 5-10 أضعاف على السلع الفاخرة</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--border);">
+                    <span class="badge badge-success">سوق جاهز</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>عدم وجود منافسين</h3>
+                <p>لا توجد علامة تجارية متكاملة بمصداقية طبية في المنطقة حالياً</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--border);">
+                    <span class="badge badge-success">أولاً في السوق</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 5: Business Model -->
+    <section id="model" class="container">
+        <h2 class="section-title">نموذج العمل</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>🏥 الاستشارات الطبية</h3>
+                <p><strong>السعر:</strong> 400-500 دولار (استشارة أولية)<br>
+                <strong>الاشتراك:</strong> 1,500 دولار/شهر<br>
+                <strong>الهامش:</strong> 85%</p>
+                <p style="margin-top: 10px; font-size: 13px; color: #666;">تقييم شامل، خطط شخصية، متابعة مستمرة</p>
+            </div>
+            <div class="card">
+                <h3>🍽️ وجبات صحية</h3>
+                <p><strong>السعر:</strong> 1,200-1,500 دولار/شهر<br>
+                <strong>عدد الوجبات:</strong> 3-5 وجبات أسبوعية<br>
+                <strong>الهامش:</strong> 55%</p>
+                <p style="margin-top: 10px; font-size: 13px; color: #666;">معدة حسب الحالة الصحية (كرون، IBS، حمل)</p>
+            </div>
+            <div class="card">
+                <h3>🌿 منتجات طبيعية</h3>
+                <p><strong>مستحضرات جمال</strong> (طبيعية 100%)<br>
+                <strong>مكملات غذائية</strong> (موثوقة وفعالة)<br>
+                <strong>الهامش:</strong> 60-70%</p>
+                <p style="margin-top: 10px; font-size: 13px; color: #666;">توزيع B2B + متجر إلكتروني</p>
+            </div>
+        </div>
+        <div class="highlight-box" style="margin-top: 30px;">
+            <strong>الإستراتيجية:</strong> الاستشارات تبني الثقة → الوجبات تضمن الالتزام → المنتجات تزيد قيمة العميل الدوراة
+        </div>
+    </section>
+
+    <!-- SLIDE 6: Unit Economics -->
+    <section id="metrics" class="container">
+        <h2 class="section-title">المؤشرات المالية</h2>
+        
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">معادلة الربحية</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>المؤشر</th>
+                        <th>القيمة</th>
+                        <th>التفسير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>تكلفة اكتساب العميل (CAC)</strong></td>
+                        <td>200 دولار</td>
+                        <td>معدل منخفض بفضل الإحالات والشراكات</td>
+                    </tr>
+                    <tr>
+                        <td><strong>قيمة العميل (LTV)</strong></td>
+                        <td>8,100 دولار</td>
+                        <td>على مدى 36 شهراً</td>
+                    </tr>
+                    <tr>
+                        <td><strong>نسبة LTV:CAC</strong></td>
+                        <td><strong style="color: var(--secondary); font-size: 18px;">40:1</strong></td>
+                        <td>استثنائية (الهدف 3:1 فقط)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>فترة الاسترجاع</strong></td>
+                        <td>2-3 أشهر</td>
+                        <td>سداد CAC وتحقيق الربح بسرعة</td>
+                    </tr>
+                    <tr>
+                        <td><strong>هامش الربح الإجمالي</strong></td>
+                        <td>65%</td>
+                        <td>قوي جداً للشركات الناشئة</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid-2">
+            <div class="chart-container">
+                <h4 style="margin-bottom: 20px;">توزيع الإيرادات (السنة الأولى)</h4>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">الوجبات الصحية</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">70%</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">الاستشارات الطبية</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">20%</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">المنتجات الطبيعية</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">10%</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h4 style="margin-bottom: 20px;">تطور الهامش (3 سنوات)</h4>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">السنة الأولى</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">35%</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">السنة الثانية</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">48%</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 14px; color: #666; margin-bottom: 5px;">السنة الثالثة</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 32px;">54%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 7: Market Analysis -->
+    <section class="container">
+        <h2 class="section-title">تحليل السوق والمنافسة</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>المعيار</th>
+                    <th>إنجي</th>
+                    <th>Factor75</th>
+                    <th>Herbalife</th>
+                    <th>عيادات محلية</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>المصداقية الطبية</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>التخصيص</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>توصيل الوجبات</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐</td>
+                    <td>⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>المنتجات</strong></td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>التكيف الثقافي</strong></td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="highlight-box" style="margin-top: 30px;">
+            <strong>الميزة التنافسية الفريدة:</strong> إنجي هي الوحيدة التي تجمع بين المصداقية الطبية + الوجبات الصحية + المنتجات + النفوذ الشهير في المنطقة
+        </div>
+    </section>
+
+    <!-- SLIDE 8: GTM Strategy -->
+    <section class="container">
+        <h2 class="section-title">استراتيجية الدخول إلى السوق</h2>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">المرحلة الأولى: الإطلاق (الأشهر 1-3)</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4>الشريحة المستهدفة</h4>
+                    <p>200-300 عميل من فئة A+ (الثروة والنفوذ)</p>
+                </div>
+                <div class="card">
+                    <h4>قنوات الاكتساب</h4>
+                    <p>الإحالات المباشرة من د. إنجي + شبكتها الشهيرة</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">المرحلة الثانية: التوسع (الأشهر 4-12)</h3>
+            <div class="grid-2">
+                <div class="chart-container">
+                    <h4 style="margin-bottom: 15px;">توزيع الاكتساب</h4>
+                    <p style="margin: 10px 0;"><strong>🏥 شراكات المستشفيات</strong> - 25%</p>
+                    <p style="margin: 10px 0;"><strong>👥 المؤثرون</strong> - 30%</p>
+                    <p style="margin: 10px 0;"><strong>📱 وسائل الإعلام المدفوعة</strong> - 25%</p>
+                    <p style="margin: 10px 0;"><strong>🤝 الشركات</strong> - 20%</p>
+                </div>
+                <div class="card">
+                    <h4>الأهداف</h4>
+                    <p>• 5-8 شراكات مع مستشفيات وعيادات<br>
+                    • 50K متابع على الإنستجرام<br>
+                    • 500-800 عميل نشط<br>
+                    • 1M دولار إيرادات شهرية</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>الكلمات الأساسية:</strong> سرعة، شراكات، معدل اكتساب منخفض، تركيز على العملاء ذوي جودة عالية
+        </div>
+    </section>
+
+    <!-- SLIDE 9: Financial Projections -->
+    <section class="container">
+        <h2 class="section-title">التوقعات المالية (3 سنوات)</h2>
+        
+        <table style="margin-bottom: 30px;">
+            <thead>
+                <tr>
+                    <th>السنة</th>
+                    <th>الإيرادات</th>
+                    <th>هامش الربح</th>
+                    <th>عدد العملاء</th>
+                    <th>الملاحظات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>السنة الأولى</strong></td>
+                    <td>$1.54M</td>
+                    <td>35% EBITDA</td>
+                    <td>500-800</td>
+                    <td>التعادل الشهر 10-12</td>
+                </tr>
+                <tr>
+                    <td><strong>السنة الثانية</strong></td>
+                    <td>$5.92M</td>
+                    <td>48% EBITDA</td>
+                    <td>2,000-2,500</td>
+                    <td>التوسع إلى الإمارات</td>
+                </tr>
+                <tr>
+                    <td><strong>السنة الثالثة</strong></td>
+                    <td>$16.43M</td>
+                    <td>54% EBITDA</td>
+                    <td>5,000-7,000</td>
+                    <td>وجود إقليمي قوي</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="grid-2">
+            <div class="chart-container">
+                <h4>نمو الإيرادات</h4>
+                <div class="metric">
+                    <div style="font-size: 12px; color: #666;">السنة 1 → 2</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 24px;">+284%</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 12px; color: #666;">السنة 2 → 3</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 24px;">+177%</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <h4>تطور الربحية</h4>
+                <div class="metric">
+                    <div style="font-size: 12px; color: #666;">السنة الأولى</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 24px;">$540K</div>
+                </div>
+                <div class="metric">
+                    <div style="font-size: 12px; color: #666;">السنة الثالثة</div>
+                    <div class="metric-number" style="color: var(--secondary); font-size: 24px;">$8.83M</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 10: Founder & Team -->
+    <section id="team" class="container">
+        <h2 class="section-title">المؤسسة والفريق</h2>
+        
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <div class="card">
+                <h3>د. إنجي كسابي</h3>
+                <p><strong>المؤسسة والقائدة الطبية</strong></p>
+                <ul style="margin: 15px 0; padding-right: 20px;">
+                    <li>دكتوراه في التغذية (جامعة واشنطن)</li>
+                    <li>15 سنة خبرة سريرية</li>
+                    <li>90K متابع على الإنستجرام</li>
+                    <li>عملاء من نجوم هوليوود والعائلات الملكية</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 20px;">الفريق المطلوب</h3>
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>المدير التنفيذي للعمليات (COO)</h4>
+                    <p>خبرة في إدارة المطابخ والوجبات الصحية - الشهر الأول</p>
+                </div>
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>مدير التسويق (CMO)</h4>
+                    <p>التسويق الصحي + شراكات المؤثرين - الشهر الثاني</p>
+                </div>
+                <div class="card">
+                    <h4>فريق التغذية (2 اختصاصي)</h4>
+                    <p>دعم الاستشارات وتطوير البروتوكولات - الشهر الأول</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>فلسفة الفريق:</strong> د. إنجي = السلطة الطبية والوجه الإعلامي<br>
+            المدير التنفيذي للعمليات = الحكومة والعمليات (تجنب الاعتماد على المؤسسة)
+        </div>
+    </section>
+
+    <!-- SLIDE 11: Risks & Mitigation -->
+    <section class="container">
+        <h2 class="section-title">إدارة المخاطر</h2>
+        
+        <div style="margin-bottom: 20px;">
+            <div class="expandable">
+                <div class="expandable-header">
+                    ⚠️ المخاطر العملياتية
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="expandable-content">
+                    <table>
+                        <tr>
+                            <td><strong>المخاطر</strong></td>
+                            <td><strong>الاحتمالية</strong></td>
+                            <td><strong>التخفيف</strong></td>
+                        </tr>
+                        <tr>
+                            <td>فشل المطبخ (الجودة/السلامة)</td>
+                            <td>متوسطة</td>
+                            <td>توظيف مدير عمليات قوي، استشاري سلامة غذائية، فحوصات يومية</td>
+                        </tr>
+                        <tr>
+                            <td>اعتماد على المؤسسة</td>
+                            <td>عالية</td>
+                            <td>حقوق ملكية مقيدة + توثيق بروتوكولات + توظيف فريق</td>
+                        </tr>
+                        <tr>
+                            <td>تكاليف اكتساب عملاء عالية</td>
+                            <td>متوسطة</td>
+                            <td>نموذج الشراكات أولاً + نظام إحالات + تسويق مدفوع</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <div class="expandable">
+                <div class="expandable-header">
+                    📊 مخاطر السوق والتمويل
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="expandable-content">
+                    <table>
+                        <tr>
+                            <td><strong>المخاطر</strong></td>
+                            <td><strong>الاحتمالية</strong></td>
+                            <td><strong>التخفيف</strong></td>
+                        </tr>
+                        <tr>
+                            <td>دخول منافسين دوليين</td>
+                            <td>منخفضة في السنة الأولى</td>
+                            <td>سرعة، قفل شراكات المستشفيات، بناء الهوية</td>
+                        </tr>
+                        <tr>
+                            <td>تراجع معدل التحقق</td>
+                            <td>متوسطة</td>
+                            <td>التركيز على الاحتفاظ + أنظمة المجتمع + إحالات</td>
+                        </tr>
+                        <tr>
+                            <td>ركود اقتصادي</td>
+                            <td>منخفضة</td>
+                            <td>تسعير علاوة (فئة A+ أقل حساسية للأسعار)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>السيناريو الأسوأ:</strong> حتى مع سوء التنفيذ، الشركة تستطيع الوصول إلى $6-10 مليون دولار إيرادات في السنة الثالثة + رابحة
+        </div>
+    </section>
+
+    <!-- SLIDE 12: Use of Funds -->
+    <section id="investment" class="container">
+        <h2 class="section-title">استخدام الأموال</h2>
+        
+        <table style="margin-bottom: 30px;">
+            <thead>
+                <tr>
+                    <th>البند</th>
+                    <th>المبلغ</th>
+                    <th>النسبة</th>
+                    <th>الغرض</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>إعداد المطبخ والمعدات</strong></td>
+                    <td>$250,000</td>
+                    <td>25%</td>
+                    <td>عقد الإيجار والمعدات والتراخيص</td>
+                </tr>
+                <tr>
+                    <td><strong>رأس المال العامل</strong></td>
+                    <td>$200,000</td>
+                    <td>20%</td>
+                    <td>المخزون والرواتب والتشغيل</td>
+                </tr>
+                <tr>
+                    <td><strong>التوظيف (الأشهر 1-3)</strong></td>
+                    <td>$200,000</td>
+                    <td>20%</td>
+                    <td>مدير العمليات والطهاة والمغذيين</td>
+                </tr>
+                <tr>
+                    <td><strong>تطوير التطبيق</strong></td>
+                    <td>$150,000</td>
+                    <td>15%</td>
+                    <td>MVP للحجز والتتبع والدفع</td>
+                </tr>
+                <tr>
+                    <td><strong>التسويق والإطلاق</strong></td>
+                    <td>$150,000</td>
+                    <td>15%</td>
+                    <td>PR والإعلانات والمؤثرون والمحتوى</td>
+                </tr>
+                <tr>
+                    <td><strong>التراخيص والقانون والتأمين</strong></td>
+                    <td>$50,000</td>
+                    <td>5%</td>
+                    <td>شهادات حلال وسلامة غذائية وتأمين</td>
+                </tr>
+                <tr style="background: var(--light); font-weight: 700;">
+                    <td><strong>الإجمالي</strong></td>
+                    <td><strong>$1,000,000</strong></td>
+                    <td><strong>100%</strong></td>
+                    <td><strong>الإطلاق الكامل + الرافعة</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="grid-2">
+            <div class="card">
+                <h3>المسار الزمني</h3>
+                <p>• <strong>الشهر 1-2:</strong> إعداد المطبخ والتوظيف<br>
+                • <strong>الشهر 3-4:</strong> الإطلاق الناعم<br>
+                • <strong>الشهر 5-6:</strong> التوسع والشراكات<br>
+                • <strong>الشهر 10-12:</strong> الربحية</p>
+            </div>
+            <div class="chart-container">
+                <h4>الاستقلالية المالية</h4>
+                <p style="font-size: 14px; margin: 15px 0;">رأس المال الأولي بقيمة 1 مليون دولار</p>
+                <p style="font-size: 14px; margin: 15px 0;">← ينتج 540K EBITDA (السنة الأولى)</p>
+                <p style="font-size: 14px; margin: 15px 0;">← لا حاجة إلى تمويل Series A</p>
+                <p style="font-size: 14px; color: var(--secondary); margin-top: 15px;"><strong>النتيجة: نقد موجب بحلول الشهر 10-12</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 13: Exit & Returns -->
+    <section class="container">
+        <h2 class="section-title">الخروج والعوائد الاستثمارية</h2>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">سيناريوهات الخروج (السنة 5-7)</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>الشراء الاستراتيجي بواسطة علامات تجارية عالمية</h4>
+                    <p><strong>المشترون:</strong> Herbalife, BASF, DSM<br>
+                    <strong>التقييم:</strong> 8-10x EBITDA<br>
+                    <strong>السنة:</strong> 5-6</p>
+                </div>
+                <div class="card">
+                    <h4>الاستحواذ بواسطة مجموعات خليجية</h4>
+                    <p><strong>المشترون:</strong> DP World, Emaar, عائلات ملكية<br>
+                    <strong>التقييم:</strong> 10-12x EBITDA (علاوة استراتيجية)<br>
+                    <strong>السنة:</strong> 4-5</p>
+                </div>
+                <div class="card">
+                    <h4>منصات الصحة الرقمية</h4>
+                    <p><strong>المشترون:</strong> Noon, Amazon Pharmacy<br>
+                    <strong>التقييم:</strong> 6-8x EBITDA<br>
+                    <strong>السنة:</strong> 5+</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="color: var(--primary); margin-bottom: 20px;">عوائد المستثمر</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>السيناريو</th>
+                        <th>احتمالية</th>
+                        <th>تقييم الخروج</th>
+                        <th>عوائد المستثمر</th>
+                        <th>معدل العائد الداخلي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>الحالة الأساسية</strong></td>
+                        <td>50%</td>
+                        <td>$70.6M (8x)</td>
+                        <td><strong>$8.5M</strong></td>
+                        <td><strong>58% IRR</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>حالة متفائلة</strong></td>
+                        <td>25%</td>
+                        <td>$140M (10x)</td>
+                        <td><strong>$16.8M</strong></td>
+                        <td><strong>80%+ IRR</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>حالة متحفظة</strong></td>
+                        <td>25%</td>
+                        <td>$27M (6x)</td>
+                        <td><strong>$3.2M</strong></td>
+                        <td><strong>26% IRR</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight-box">
+            <strong>النتيجة النهائية:</strong> متوسط العوائد المتوقع = <strong>9 أضعاف الاستثمار الأولي</strong> مع <strong>53% معدل عائد داخلي</strong> على مدى 5-7 سنوات
+        </div>
+    </section>
+
+    <!-- SLIDE 14: Key Takeaways -->
+    <section class="container">
+        <h2 class="section-title">أهم الرسائل</h2>
+        
+        <div class="grid-2">
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 20px;">لماذا تستثمر في إنجي؟</h3>
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>✅ مؤسسة استثنائية</h4>
+                    <p>د. إنجي = خبرة 15 سنة + شهرة عالمية + شبكة نجوم</p>
+                </div>
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>✅ توقيت السوق مثالي</h4>
+                    <p>نمو الخليج + 2-3 سنة قبل المنافسين</p>
+                </div>
+                <div class="card" style="margin-bottom: 15px;">
+                    <h4>✅ اقتصاديات رافعة</h4>
+                    <p>LTV:CAC = 40:1، ربح سنة أولى = نقد موجب</p>
+                </div>
+                <div class="card">
+                    <h4>✅ مسار خروج واضح</h4>
+                    <p>Herbalife, BASF, مجموعات خليجية = عوائد 8-10x</p>
+                </div>
+            </div>
+            <div>
+                <h3 style="color: var(--primary); margin-bottom: 20px;">الأولويات الحرجة</h3>
+                <div class="card" style="margin-bottom: 15px; border-right: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent);">🔴 الأسبوع 1-2</h4>
+                    <p>تأمين المؤسسة (حقوق ملكية + عقد)<br>
+                    توظيف مدير العمليات<br>
+                    تأمين مساحة المطبخ</p>
+                </div>
+                <div class="card" style="margin-bottom: 15px; border-right: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent);">🟠 الأسبوع 3-4</h4>
+                    <p>توثيق بروتوكولات الوجبات<br>
+                    استشاري السلامة الغذائية<br>
+                    توظيف المغذيين</p>
+                </div>
+                <div class="card" style="border-right: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent);">🟡 الأسبوع 5-8</h4>
+                    <p>تشغيل المطبخ<br>
+                    إطلاق ناعم (50 عميل)<br>
+                    شراكات المستشفيات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="container" style="text-align: center; padding: 60px 20px;">
+        <h2 style="color: var(--primary); font-size: 36px; margin-bottom: 20px;">استثمر في مستقبل الصحة في الخليج</h2>
+        <p style="font-size: 18px; color: #666; margin-bottom: 30px;">فرصة نادرة: مؤسسة متميزة + سوق نام + اقتصاديات ممتازة</p>
+        <a href="#investment" class="btn btn-primary" style="padding: 16px 50px; font-size: 18px;">تحميل العرض الكامل</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 إنجي - منصة العافية والتغذية المتكاملة</p>
+            <p style="margin-top: 10px; font-size: 12px;">مستند سري - للاستخدام الداخلي والمستثمرين المحتملين فقط</p>
+        </div>
+    </footer>
+
+    <script>
+        // Expandable sections
+        document.querySelectorAll('.expandable-header').forEach(header => {
+            header.addEventListener('click', function() {
+                this.closest('.expandable').classList.toggle('active');
+            });
+        });
+
+        // Scroll indicator
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.title = `إنجي - ${Math.round(scrollPercent)}% منقول`;
+        });
+
+        // Print function
+        window.print = function() {
+            window.print();
+        };
+
+        // Mobile menu (future enhancement)
+        const nav = document.querySelector('nav');
+        if (window.innerWidth < 768) {
+            nav.style.flexDirection = 'column';
+        }
+    </script>
+</body>
+</html>
