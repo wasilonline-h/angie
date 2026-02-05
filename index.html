@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Kassabie Conglomerate | Executive Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
         /* INDEX SPECIFIC STYLES THAT ARE NOT SHARED */
-        
+
         /* NAVIGATION */
         nav {
             background: #FFF;
@@ -75,6 +78,20 @@
             font-weight: 600;
         }
 
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            padding: 4px;
+            /* Double border effect */
+            background: #FFF;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
         h1 {
             font-size: 64px;
             font-weight: 400;
@@ -131,7 +148,7 @@
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
             border-color: transparent;
         }
 
@@ -238,13 +255,27 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 42px; }
-            .dashboard-grid { padding: 0 20px; }
-            header { padding: 60px 20px 40px; }
-            .card { padding: 30px; min-height: auto; gap: 30px; }
+            h1 {
+                font-size: 42px;
+            }
+
+            .dashboard-grid {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 60px 20px 40px;
+            }
+
+            .card {
+                padding: 30px;
+                min-height: auto;
+                gap: 30px;
+            }
         }
     </style>
 </head>
+
 <body class="dashboard-page">
 
     <nav>
@@ -253,13 +284,16 @@
     </nav>
 
     <header>
+        <img src="angie.png" alt="Dr. Angie Kassabie" class="profile-image">
+        <br>
         <span class="section-label">Executive Portal</span>
         <h1>The Medical<br><span>Fashion House</span></h1>
-        <p class="subtitle">Welcome to the strategic infrastructure for Dr. Angie Kassabie. Select a module below to access the detailed ecosystem files.</p>
+        <p class="subtitle">Welcome to the strategic infrastructure for Dr. Angie Kassabie. Select a module below to
+            access the detailed ecosystem files.</p>
     </header>
 
     <main class="dashboard-grid">
-        
+
         <!-- File 1: Vision -->
         <a href="angie-vision.html" class="card">
             <div class="card-header">
@@ -268,7 +302,8 @@
             </div>
             <div>
                 <h2>The Chanel Strategy</h2>
-                <p>The core philosophy shifting the brand from "Service" to "Icon". Understanding the "Haute Couture vs. Perfume" business model.</p>
+                <p>The core philosophy shifting the brand from "Service" to "Icon". Understanding the "Haute Couture vs.
+                    Perfume" business model.</p>
             </div>
             <div class="card-footer">
                 <span>View Vision Deck</span>
@@ -284,7 +319,8 @@
             </div>
             <div>
                 <h2>Strategic Business Plan</h2>
-                <p>The 3-Year execution roadmap, financial allocation (Series A), and the "Closed-Loop Ecosystem" revenue model.</p>
+                <p>The 3-Year execution roadmap, financial allocation (Series A), and the "Closed-Loop Ecosystem"
+                    revenue model.</p>
             </div>
             <div class="card-footer">
                 <span>View Business Plan</span>
@@ -300,7 +336,8 @@
             </div>
             <div>
                 <h2>Operational Architecture</h2>
-                <p>The organizational chart, key executive hires, and the operational breakdown of the Media, Labs, and Product verticals.</p>
+                <p>The organizational chart, key executive hires, and the operational breakdown of the Media, Labs, and
+                    Product verticals.</p>
             </div>
             <div class="card-footer">
                 <span>View Org Structure</span>
@@ -316,7 +353,8 @@
             </div>
             <div>
                 <h2>Global Marketing Plan</h2>
-                <p>Advanced detailed marketing strategy, budgeting, and channel distribution across GCC and International markets.</p>
+                <p>Advanced detailed marketing strategy, budgeting, and channel distribution across GCC and
+                    International markets.</p>
             </div>
             <div class="card-footer">
                 <span>View Marketing Plan</span>
@@ -331,4 +369,5 @@
     </footer>
 
 </body>
+
 </html>
