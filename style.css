@@ -1010,3 +1010,131 @@ a {
         line-height: 1.5;
     }
 }
+/* 4. ARTICLE / DETAIL PAGE LAYOUT */
+.article-header {
+    text-align: center;
+    padding: 100px 20px 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.article-label {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 600;
+}
+
+.article-title {
+    font-size: clamp(40px, 6vw, 80px); /* Massive Scaling */
+    font-weight: 500;
+    line-height: 1.0;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+    color: var(--text-main);
+}
+
+.article-subtitle {
+    font-size: 22px;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.article-content {
+    padding-bottom: 120px;
+}
+
+/* Feature Block (Image + Text) */
+.feature-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.feature-block.reversed {
+    direction: rtl; 
+}
+.feature-block.reversed .feature-text { direction: ltr; }
+
+.feature-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.feature-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.feature-text h3 {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.feature-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    border-left: 3px solid var(--text-main);
+    padding-left: 30px;
+    margin: 40px 0;
+}
+
+.quote-box p {
+    font-size: 20px;
+    color: var(--text-main);
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 120px;
+}
+
+.info-card {
+    background: #FFF;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.info-card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.info-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.number-stat {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .feature-block { grid-template-columns: 1fr; gap: 40px; }
+    .feature-block.reversed { direction: ltr; }
+}
