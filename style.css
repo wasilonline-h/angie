@@ -19,11 +19,9 @@ body {
     color: var(--charcoal);
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    padding: 20px 0;
-    /* Default centering for slide-based pages; overridden by index if needed */
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
+    padding: 0;
+    display: block;
+    /* Standard flow */
 }
 
 /* INDEX SPECIFIC OVERRIDES */
@@ -198,19 +196,18 @@ a {
     background-color: var(--white);
     border: 1px solid var(--border);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-    padding: 60px;
+    padding: 80px 60px;
+    /* Increased top/bottom padding */
     position: relative;
     width: 100%;
     max-width: 1280px;
-    /* Max width instead of fixed width */
-    min-height: 720px;
-    /* Min height instead of fixed height */
-    margin: 20px auto;
+    margin: 40px auto 80px auto;
+    /* Add bottom margin for spacing between sections */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
-    /* Be careful with this on mobile if content overflows */
+    overflow: visible;
+    /* Allow content to flow */
 }
 
 /* MOBILE ADJUSTMENTS FOR SLIDE CONTAINER */
