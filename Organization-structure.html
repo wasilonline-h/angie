@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kassabie Conglomerate - Operational Structure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+/* REUSING THE "CLINICAL LUXURY" THEME FOR CONSISTENCY */
+* { box-sizing: border-box; }
+body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 20px 0; place-items: center; }
+.slide-container { align-items: flex-start; background-color: #FFFFFF; border: 1px solid #E0E0E0; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; font-family: 'Montserrat', sans-serif; gap: 40px; height: 720px; justify-content: center; overflow: hidden; padding: 60px; position: relative; width: 1280px; }
+.slide-container::before { content: ''; height: 100%; left: 0; position: absolute; top: 0; width: 100%; background-image: radial-gradient(#E0E0E0 1px, transparent 1px); background-size: 40px 40px; opacity: 0.3; z-index: 0; }
+.slide-container::after { background: #D4AF37; top: 0; content: ''; height: 8px; left: 0; position: absolute; width: 100%; z-index: 2; }
+.slide-container > * { position: relative; z-index: 1; }
+
+/* TYPOGRAPHY */
+.slide-container h1, .slide-container h2, .slide-container h3 { color: #111; font-family: 'Playfair Display', serif; font-weight: 500; margin: 0; letter-spacing: -0.5px; }
+.slide-container h1 span, .slide-container h2 span, .slide-container strong { color: #D4AF37; font-weight: 600; }
+.slide-container p, .slide-container li, .slide-container .subtitle { color: #444; font-family: 'Montserrat', sans-serif; font-weight: 400; line-height: 1.6; }
+.slide-container h1 { font-size: 72px; line-height: 1.1; }
+.slide-title { font-size: 48px; margin-bottom: 20px; width: 100%; border-bottom: 1px solid #EEE; padding-bottom: 20px; }
+.slide-container h3 { font-size: 24px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+.slide-container p { font-size: 18px; }
+
+/* LAYOUTS */
+.content-area { width: 100%; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; height: 100%; }
+.two-column.tiled { align-items: stretch; }
+.two-column.tiled > div { background: #FAFAFA; padding: 40px; border: 1px solid #EAEAEA; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+.tiled-content { display: flex; gap: 30px; width: 100%; }
+.tile { background: #FAFAFA; border: 1px solid #EAEAEA; padding: 40px 30px; flex: 1; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+.tile h3 { color: #D4AF37; border-bottom: 1px solid #EEE; padding-bottom: 15px; margin-bottom: 20px; }
+.tile ul { list-style: none; padding: 0; }
+.tile li { margin-bottom: 15px; font-size: 16px; display: flex; align-items: flex-start; }
+.tile li i { color: #D4AF37; margin-right: 10px; margin-top: 5px; }
+
+/* ORG CHART SPECIFIC */
+.org-chart { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.org-level { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; width: 100%; }
+.org-box { background: #FFF; border: 1px solid #D4AF37; padding: 20px; text-align: center; min-width: 200px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.org-box.ceo { background: #D4AF37; color: #FFF; border: none; transform: scale(1.1); }
+.org-box.ceo h4, .org-box.ceo p { color: #FFF; }
+.org-box h4 { margin: 0 0 5px 0; font-family: 'Playfair Display', serif; font-size: 18px; }
+.org-box p { margin: 0; font-size: 14px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+.connector { height: 20px; width: 2px; background: #CCC; margin: 0 auto; }
+.connector-hz { height: 2px; background: #CCC; width: 80%; margin: 0 auto 20px auto; }
+
+/* IMAGES */
+.image-wrapper { height: 100%; width: 100%; overflow: hidden; }
+.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.title-layout { text-align: center; align-self: center; max-width: 900px; background: rgba(255,255,255,0.95); padding: 60px; border: 1px solid #F0F0F0; }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide-container" id="slide1">
+    <div class="title-layout">
+        <p style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">Operational Framework</p>
+        <h1>Organizational<br><span>Architecture</span></h1>
+        <p class="subtitle">Human Capital • Roles • Key Responsibilities</p>
+    </div>
+</div>
+
+<!-- Slide 2: The High Level Org Chart -->
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">Executive Hierarchy</h2>
+    <div class="content-area">
+        <div class="org-chart">
+            <!-- Level 1 -->
+            <div class="org-level">
+                <div class="org-box ceo">
+                    <h4>Dr. Angie Kassabie</h4>
+                    <p>Founder & Visionary</p>
+                </div>
+            </div>
+            <div class="connector"></div>
+            <div class="connector-hz"></div>
+            <!-- Level 2 -->
+            <div class="org-level">
+                <div class="org-box">
+                    <h4>Chief Strategy Officer</h4>
+                    <p>Expansion & Partnerships</p>
+                </div>
+                <div class="org-box">
+                    <h4>Chief Operating Officer</h4>
+                    <p>Execution & Systems</p>
+                </div>
+                <div class="org-box">
+                    <h4>Chief Financial Officer</h4>
+                    <p>Capital & Investor Relations</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; max-width: 800px; align-self: center;">
+            <strong>The Philosophy:</strong> Dr. Angie is the "Face" and "Product." The C-Suite executes the vision so she is not bogged down by operations.
+        </p>
+    </div>
+</div>
+
+<!-- Slide 3: Vertical 1 - Media House Team -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Vertical 1: The Media House</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div style="padding: 0; border: 0;">
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/600x600/F5F5F7/D4AF37?text=Content+Production" alt="Production crew filming">
+                </div>
+            </div>
+            <div>
+                <h3>The "Fame" Engine</h3>
+                <ul>
+                    <li>
+                        <strong><i class="fa-solid fa-user"></i> Head of Content</strong>
+                        <br><span style="font-size: 14px; color: #666;">Owns the content calendar. Directs "The Fixer". Ensures "Sterile Chic" aesthetic.</span>
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-video"></i> Dedicated Videographer</strong>
+                        <br><span style="font-size: 14px; color: #666;">Shadows Dr. Angie 3 days/week. Captures B-roll and daily routines.</span>
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-star"></i> PR & Talent Manager</strong>
+                        <br><span style="font-size: 14px; color: #666;">Gatekeeper for interviews. Books Red Carpet appearances. Negotiates speaking fees.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Vertical 2 - Kassabie Labs Team -->
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Vertical 2: Kassabie Labs (Franchise)</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <h3><i class="fa-solid fa-building"></i> Head of Franchise</h3>
+                <ul>
+                    <li>Develops "The Kassabie Codex" (Ops Manual).</li>
+                    <li>Audits franchisees for brand compliance.</li>
+                    <li>Manages site selection for new GCC locations.</li>
+                </ul>
+            </div>
+            <div class="tile">
+                <h3><i class="fa-solid fa-user-doctor"></i> Medical Director</h3>
+                <ul>
+                    <li>Oversees clinical protocols (IV drips, Testing).</li>
+                    <li>Trains local doctors on the "Angie Method".</li>
+                    <li>Ensures medical liability compliance in each country.</li>
+                </ul>
+            </div>
+            <div class="tile">
+                <h3><i class="fa-solid fa-mug-hot"></i> F&B Manager</h3>
+                <ul>
+                    <li>Manages the "Bio-Bar" menu.</li>
+                    <li>Sources organic ingredients for the centers.</li>
+                    <li>Trains staff on luxury hospitality standards.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Vertical 3 - Product Team -->
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Vertical 3: Product Lines</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3>The "Scale" Engine</h3>
+                <ul>
+                    <li>
+                        <strong><i class="fa-solid fa-flask"></i> Head of R&D / Formulation</strong>
+                        <br><span style="font-size: 14px; color: #666;">Translates clinical data into product formulas. Manages lab partners.</span>
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-truck-fast"></i> Supply Chain Manager</strong>
+                        <br><span style="font-size: 14px; color: #666;">Sourcing premium packaging. Managing inventory flow between manufacturers and distribution hubs.</span>
+                    </li>
+                    <li>
+                        <strong><i class="fa-solid fa-globe"></i> E-Commerce Director</strong>
+                        <br><span style="font-size: 14px; color: #666;">Manages the Shopify Plus storefront. Runs paid acquisition (Meta/Google Ads). Optimization of conversion rates.</span>
+                    </li>
+                </ul>
+            </div>
+            <div style="padding: 0; border: 0;">
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/600x600/FAFAFA/333?text=Product+Operations" alt="Supply chain and logistics">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: The Strategic Office -->
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">The Strategy Office (Your Domain)</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3><i class="fa-solid fa-chess-queen" style="color:#D4AF37;"></i> Core Mandate</h3>
+                <p><strong>The Architect.</strong> You sit between the Vision (Angie) and the Execution (COO).</p>
+                <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+                    <p><strong>Key Deliverables:</strong></p>
+                    <ul style="font-size: 18px; margin-top: 10px;">
+                        <li><strong>Gatekeeping:</strong> Filtering inbound deals (Investors, Partners).</li>
+                        <li><strong>Ecosystem Integrity:</strong> Ensuring Media, Labs, and Products are actually feeding each other.</li>
+                        <li><strong>Investor Relations:</strong> Leading the Series A raise and reporting.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-wrapper" style="background: #FAFAFA; display: flex; align-items: center; justify-content: center;">
+                 <i class="fa-solid fa-network-wired" style="font-size: 120px; color: #E0E0E0;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Hiring Roadmap -->
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">Recruitment Roadmap</h2>
+    <div class="content-area">
+        <div class="timeline-layout">
+            <div class="timeline-item">
+                <h3>Phase 1 (Immediate)</h3>
+                <p><strong>The Builders</strong><br>COO, Videographer, Head of Content.<br><em>Focus: Media & Ops Cleanup.</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>Phase 2 (Month 6)</h3>
+                <p><strong>The Scalers</strong><br>Head of Product, Supply Chain Mgr.<br><em>Focus: Product Launch.</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>Phase 3 (Year 1)</h3>
+                <p><strong>The Expanders</strong><br>Head of Franchise, Regional Managers.<br><em>Focus: GCC Rollout.</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>Phase 4 (Year 2)</h3>
+                <p><strong>The Global Team</strong><br>US/UK Country Managers.<br><em>Focus: Western Entry.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
