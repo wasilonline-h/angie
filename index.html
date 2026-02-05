@@ -4,369 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kassabie Conglomerate | Executive Portal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>The Journal - Dr. Angie Kassabie</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* INDEX SPECIFIC STYLES THAT ARE NOT SHARED */
-
-        /* NAVIGATION */
-        nav {
-            background: #FFF;
-            border-bottom: 1px solid var(--border);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        .brand {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-decoration: none;
-        }
-
-        .brand span {
-            color: var(--gold);
-        }
-
-        .status-pill {
-            background: rgba(212, 175, 55, 0.08);
-            color: var(--gold);
-            padding: 8px 18px;
-            border-radius: 0;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        /* HERO SECTION */
-        header {
-            text-align: center;
-            padding: 100px 20px 80px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--gold);
-            margin-bottom: 20px;
-            display: block;
-            font-weight: 600;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--gold);
-            padding: 4px;
-            /* Double border effect */
-            background: #FFF;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-            display: inline-block;
-        }
-
-        h1 {
-            font-size: 64px;
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
-
-        h1 span {
-            color: var(--gold);
-            font-style: italic;
-        }
-
-        p.subtitle {
-            font-size: 18px;
-            color: var(--text-grey);
-            line-height: 1.8;
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 300;
-        }
-
-        /* GRID LAYOUT */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 1400px;
-            margin: 0 auto 100px;
-            padding: 0 40px;
-            width: 100%;
-        }
-
-        @media (max-width: 400px) {
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* CARD STYLING */
-        .card {
-            background: #FFF;
-            border: 1px solid var(--border);
-            padding: 50px 40px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            text-decoration: none;
-            color: inherit;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 380px;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-            border-color: transparent;
-        }
-
-        /* Top Gold Line Animation */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gold);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .card-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            color: #E0E0E0;
-            font-style: italic;
-        }
-
-        .icon-wrapper {
-            font-size: 32px;
-            color: var(--charcoal);
-            transition: color 0.3s ease;
-        }
-
-        .card:hover .icon-wrapper {
-            color: var(--gold);
-        }
-
-        .card h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 15px;
-            font-weight: 500;
-            color: var(--charcoal);
-            line-height: 1.2;
-        }
-
-        .card p {
-            font-size: 15px;
-            color: var(--text-grey);
-            line-height: 1.7;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--charcoal);
-            border-top: 1px solid #F0F0F0;
-            padding-top: 20px;
-            transition: color 0.3s ease;
-        }
-
-        .card:hover .card-footer {
-            color: var(--gold);
-            border-top-color: rgba(212, 175, 55, 0.2);
-        }
-
-        .arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover .arrow {
-            transform: translateX(8px);
-        }
-
-        /* FOOTER */
-        footer {
-            margin-top: auto;
-            border-top: 1px solid var(--border);
-            padding: 40px;
-            text-align: center;
-            background: #FFF;
-        }
-
-        footer p {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 42px;
-            }
-
-            .dashboard-grid {
-                padding: 0 20px;
-            }
-
-            header {
-                padding: 60px 20px 40px;
-            }
-
-            .card {
-                padding: 30px;
-                min-height: auto;
-                gap: 30px;
-            }
-        }
-    </style>
 </head>
 
-<body class="dashboard-page">
+<body>
 
-    <nav>
-        <a href="#" class="brand">KASSABIE <span>CONGLOMERATE</span></a>
-        <div class="status-pill">Confidential Strategy 2026</div>
-    </nav>
+    <div class="page-wrapper">
 
-    <header>
-        <img src="angie.png" alt="Dr. Angie Kassabie" class="profile-image">
-        <br>
-        <span class="section-label">Executive Portal</span>
-        <h1>The Medical<br><span>Fashion House</span></h1>
-        <p class="subtitle">Welcome to the strategic infrastructure for Dr. Angie Kassabie. Select a module below to
-            access the detailed ecosystem files.</p>
-    </header>
+        <!-- 1. STICKY HEADER -->
+        <header class="site-header">
+            <div class="brand-logo">Angie.</div>
 
-    <main class="dashboard-grid">
+            <nav class="header-nav">
+                <a href="#" class="active">Journal</a>
+                <a href="angie-vision.html">Vision</a>
+                <a href="business-plan.html">Strategy</a>
+                <a href="marketing.html">Marketing</a>
+            </nav>
 
-        <!-- File 1: Vision -->
-        <a href="angie-vision.html" class="card">
-            <div class="card-header">
-                <div class="icon-wrapper"><i class="fa-solid fa-crown"></i></div>
-                <span class="card-number">01</span>
-            </div>
-            <div>
-                <h2>The Chanel Strategy</h2>
-                <p>The core philosophy shifting the brand from "Service" to "Icon". Understanding the "Haute Couture vs.
-                    Perfume" business model.</p>
-            </div>
-            <div class="card-footer">
-                <span>View Vision Deck</span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </div>
-        </a>
+            <a href="#" class="cta-button">Connect</a>
+        </header>
 
-        <!-- File 2: Business Plan -->
-        <a href="business-plan.html" class="card">
-            <div class="card-header">
-                <div class="icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>
-                <span class="card-number">02</span>
-            </div>
-            <div>
-                <h2>Strategic Business Plan</h2>
-                <p>The 3-Year execution roadmap, financial allocation (Series A), and the "Closed-Loop Ecosystem"
-                    revenue model.</p>
-            </div>
-            <div class="card-footer">
-                <span>View Business Plan</span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </div>
-        </a>
+        <!-- 2. HERO SECTION -->
+        <section class="hero-section">
+            <h1 class="hero-title">The<br>Journal.</h1>
+            <p class="hero-subtitle">Exploring the intersection of clinical science, luxury lifestyle, and global
+                business strategy.</p>
+        </section>
 
-        <!-- File 3: Operations -->
-        <a href="Organization-structure.html" class="card">
-            <div class="card-header">
-                <div class="icon-wrapper"><i class="fa-solid fa-sitemap"></i></div>
-                <span class="card-number">03</span>
-            </div>
-            <div>
-                <h2>Operational Architecture</h2>
-                <p>The organizational chart, key executive hires, and the operational breakdown of the Media, Labs, and
-                    Product verticals.</p>
-            </div>
-            <div class="card-footer">
-                <span>View Org Structure</span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </div>
-        </a>
+        <!-- 3. JOURNAL GRID -->
+        <div class="journal-grid">
 
-        <!-- File 4: Marketing -->
-        <a href="marketing.html" class="card">
-            <div class="card-header">
-                <div class="icon-wrapper"><i class="fa-solid fa-bullhorn"></i></div>
-                <span class="card-number">04</span>
-            </div>
-            <div>
-                <h2>Global Marketing Plan</h2>
-                <p>Advanced detailed marketing strategy, budgeting, and channel distribution across GCC and
-                    International markets.</p>
-            </div>
-            <div class="card-footer">
-                <span>View Marketing Plan</span>
-                <i class="fa-solid fa-arrow-right arrow"></i>
-            </div>
-        </a>
+            <!-- FEATURED CARD (Vision) -->
+            <a href="angie-vision.html" class="journal-card featured">
+                <img src="angie.png" alt="Dr. Angie Kassabie Portrait" class="card-bg-image"
+                    style="object-position: top center;">
+                <div class="card-tag">Vision</div>
+                <div class="card-content">
+                    <h2 class="card-title">The Chanel<br>Strategy</h2>
+                    <p class="card-meta">Redefining the brand architecture.</p>
+                </div>
+            </a>
 
-    </main>
+            <!-- STANDARD CARD (Business Plan) -->
+            <a href="business-plan.html" class="journal-card text-only">
+                <div class="card-tag">Business</div>
+                <div class="card-content">
+                    <div>
+                        <h2 class="card-title">Strategic<br>Roadmap</h2>
+                    </div>
+                    <div>
+                        <p class="card-meta">2026 Expansion Plan</p>
+                        <hr style="border: 0; border-top: 1px solid rgba(0,0,0,0.1); margin: 20px 0;">
+                        <p style="font-size: 14px; color: var(--text-muted);">
+                            • Market Penetration<br>
+                            • Revenue Streams<br>
+                            • Global Partnerships
+                        </p>
+                    </div>
+                </div>
+            </a>
 
-    <footer>
-        <p>&copy; 2026 The Kassabie Conglomerate. Strategic Planning Office. All Rights Reserved.</p>
-    </footer>
+            <!-- STANDARD CARD (Org Structure) -->
+            <a href="Organization-structure.html" class="journal-card">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
+                    alt="Office Architecture" class="card-bg-image">
+                <div class="card-tag">Structure</div>
+                <div class="card-content">
+                    <h2 class="card-title">Operational<br>Hierarchy</h2>
+                    <p class="card-meta">The Flow of Command.</p>
+                </div>
+            </a>
+
+            <!-- STANDARD CARD (Marketing) -->
+            <a href="marketing.html" class="journal-card">
+                <img src="https://images.unsplash.com/photo-1555529733-0e670560f7e1?q=80&w=2600&auto=format&fit=crop"
+                    alt="Editorial Fashion" class="card-bg-image" style="object-position: center 20%;">
+                <div class="card-tag">Marketing</div>
+                <div class="card-content">
+                    <h2 class="card-title">Global<br>Domination</h2>
+                    <p class="card-meta">The 360° Media Strategy.</p>
+                </div>
+            </a>
+
+            <!-- COMING SOON / EXTRA -->
+            <div class="journal-card text-only" style="background: #111;">
+                <div class="card-tag" style="background: rgba(255,255,255,0.1); color: #FFF;">Coming Soon</div>
+                <div class="card-content" style="color: #FFF;">
+                    <h2 class="card-title">Product<br>Launch</h2>
+                    <p class="card-meta" style="color: #888;">Q3 2026</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 </body>
 
