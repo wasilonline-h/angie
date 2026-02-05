@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chanel Strategy - Dr. Angie Kassabie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+/* 1. THE SETUP - "Clinical Luxury" Theme */
+* { box-sizing: border-box; }
+body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 20px 0; place-items: center; }
+
+.slide-container {
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  gap: 40px;
+  height: 720px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
+  width: 1280px;
+}
+
+/* 1.1 BACKGROUND STYLING */
+.slide-container::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-image: radial-gradient(#E0E0E0 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Gold Accent Line */
+.slide-container::after {
+  background: #D4AF37;
+  top: 0;
+  content: '';
+  height: 8px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.slide-container > * { position: relative; z-index: 1; }
+
+/* 2. TYPOGRAPHY */
+.slide-container h1, .slide-container h2, .slide-container h3, .slide-container .quote-layout blockquote {
+  color: #111;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.slide-container h1 span, .slide-container h2 span, .slide-container strong, .slide-container .number, .slide-container cite {
+  color: #D4AF37;
+  font-weight: 600;
+}
+
+.slide-container p, .slide-container li, .slide-container .subtitle, .slide-container .number-label {
+  color: #444;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.slide-container h1 { font-size: 72px; line-height: 1.1; }
+.slide-title { font-size: 48px; margin-bottom: 20px; width: 100%; border-bottom: 1px solid #EEE; padding-bottom: 20px; }
+.slide-container h3 { font-size: 26px; margin-bottom: 15px; }
+.slide-container p { font-size: 20px; }
+
+/* 3. LAYOUTS */
+.content-area { width: 100%; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+
+/* Title Slide */
+.title-layout { text-align: center; align-self: center; max-width: 900px; background: rgba(255,255,255,0.95); padding: 60px; border: 1px solid #F0F0F0; }
+.title-layout .subtitle { font-size: 22px; margin-top: 30px; color: #666; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
+
+/* Bleed Image */
+.slide-container.bleed-image-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; align-items: start; gap: 0; }
+.slide-container.bleed-image-layout > .content-container { padding: 80px; display: flex; flex-direction: column; justify-content: center; height: 100%; background: #FFF; }
+.slide-container.bleed-image-layout > .image-container { height: 100%; width: 100%; }
+.bleed-image-side { height: 720px; width: 100%; object-fit: cover; }
+
+/* Highlight Numbers (Valuation Slide) */
+.highlight-numbers-layout { display: flex; width: 100%; justify-content: center; gap: 80px; align-items: center; }
+.highlight-numbers-layout > div { text-align: center; flex: 1; padding: 40px; background: #FAFAFA; border: 1px solid #EAEAEA; }
+.highlight-numbers-layout .number { font-size: 100px; line-height: 1; margin-bottom: 20px; }
+.highlight-numbers-layout .number-label { font-size: 24px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
+
+/* Timeline (Day in Life) */
+.timeline-layout { display: flex; justify-content: space-between; position: relative; width: 100%; margin-top: 40px; }
+.timeline-layout::before { content: ''; position: absolute; top: 20px; left: 0; width: 100%; height: 1px; background: #CCC; z-index: 0; }
+.timeline-item { position: relative; z-index: 1; width: 22%; text-align: center; }
+.timeline-item::before { content: ''; display: block; width: 16px; height: 16px; background: #FFF; border-radius: 50%; margin: 12px auto 20px auto; border: 4px solid #D4AF37; box-shadow: 0 0 0 4px #FFF; }
+.timeline-item h3 { color: #000; font-size: 18px; margin-bottom: 10px; font-weight: 700; }
+.timeline-item p { font-size: 16px; color: #555; }
+
+/* Tiled Content (Pyramid) */
+.tiled-content { display: flex; gap: 30px; width: 100%; }
+.tile { background: #FAFAFA; border: 1px solid #EAEAEA; padding: 40px 30px; flex: 1; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+.tile .icon { font-size: 50px; color: #D4AF37; margin-bottom: 20px; }
+
+/* Split Concept Slide */
+.split-concept { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 40px; width: 100%; align-items: center; }
+.split-concept .divider { height: 200px; background: #E0E0E0; }
+.concept-box h3 { font-size: 32px; margin-bottom: 20px; }
+.concept-box p { font-size: 22px; color: #666; }
+.arrow-right { font-size: 30px; color: #D4AF37; margin-top: 20px; }
+
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide-container" id="slide1">
+    <div class="title-layout">
+        <p style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">The Vision Narrative</p>
+        <h1>The "Chanel"<br><span>Strategy</span></h1>
+        <p class="subtitle">Transforming from "Doctor" to "Medical Fashion House"</p>
+    </div>
+</div>
+
+<!-- Slide 2: The Psychological Architecture (NEW) -->
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">The Consumer Mindset Shift</h2>
+    <div class="content-area">
+        <div class="split-concept">
+            <div class="concept-box" style="text-align: right;">
+                <h3>The "Old" Angie</h3>
+                <p><em>"She is a doctor who can fix my weight."</em></p>
+                <p style="font-size: 16px; margin-top: 15px;">Transaction: <strong>Service</strong></p>
+            </div>
+            <div class="divider"></div>
+            <div class="concept-box" style="text-align: left;">
+                <h3>The "New" Empire</h3>
+                <p><em>"She holds the secret that keeps the elite young."</em></p>
+                <p style="font-size: 16px; margin-top: 15px; color: #D4AF37;">Transaction: <strong>Access</strong></p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 50px; font-style: italic;">
+            We are moving the brand from "solving a problem" to "granting entry into a world."
+        </p>
+    </div>
+</div>
+
+<!-- Slide 3: The House Model -->
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">The "House" Model</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-crown"></i></div>
+                <h3>Haute Couture</h3>
+                <p><strong>Dr. Angie (The Myth)</strong><br>Exclusive. Expensive. Unreachable.<br><em>Creates the Brand Heat.</em></p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-store"></i></div>
+                <h3>Prêt-à-Porter</h3>
+                <p><strong>Kassabie Labs (The Boutique)</strong><br>Accessible Luxury.<br><em>Creates the Physical Presence.</em></p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-pump-soap"></i></div>
+                <h3>The Perfume</h3>
+                <p><strong>Products (The Scale)</strong><br>Mass Market.<br><em>Creates the Billion-Dollar Revenue.</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Tier 1 - Haute Couture -->
+<div class="slide-container bleed-image-layout" id="slide4">
+    <div class="image-container">
+        <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=Haute+Couture+%7C+The+Icon" alt="Glamorous red carpet moment representing Haute Couture">
+    </div>
+    <div class="content-container">
+        <p style="text-transform: uppercase; color: #999; letter-spacing: 2px;">Tier 01</p>
+        <h2 class="slide-title">Haute Couture</h2>
+        <h3>The "Unreachable" Muse</h3>
+        <p>This is you, Angie. The tailor who hand-stitches biology for Royals.</p>
+        <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+            <p><strong>Psychology:</strong> "If I cannot hire her, I want to know what she knows." Her inaccessibility <em>is</em> the marketing.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Tier 2 - Prêt-à-Porter -->
+<div class="slide-container bleed-image-layout" id="slide5">
+    <div class="content-container">
+        <p style="text-transform: uppercase; color: #999; letter-spacing: 2px;">Tier 02</p>
+        <h2 class="slide-title">Prêt-à-Porter</h2>
+        <h3>The "Kassabie Labs"</h3>
+        <p>The "Ready-to-Wear" collection. A place where the aspirational class can taste the lifestyle.</p>
+        <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+            <p><strong>Psychology:</strong> The Lab is the stage. It validates that the "Magic" is real, scalable, and scientific.</p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img class="bleed-image-side" src="https://placehold.co/600x800/EEE/D4AF37?text=Pr%C3%AAt-%C3%A0-Porter+%7C+The+Labs" alt="Luxury wellness clinic interior with white marble and gold">
+    </div>
+</div>
+
+<!-- Slide 6: Tier 3 - The Perfume -->
+<div class="slide-container bleed-image-layout" id="slide6">
+    <div class="image-container">
+        <img class="bleed-image-side" src="https://placehold.co/600x800/FAFAFA/D4AF37?text=The+Perfume+%7C+Product+Scale" alt="High end luxury cosmetic bottle packaging">
+    </div>
+    <div class="content-container">
+        <p style="text-transform: uppercase; color: #999; letter-spacing: 2px;">Tier 03</p>
+        <h2 class="slide-title">The Perfume</h2>
+        <h3>The Product Line</h3>
+        <p>The girl who can't afford the Couture dress <em>can</em> afford the $100 perfume.</p>
+        <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+            <p><strong>Psychology:</strong> "The Token of Access." Buying the 'Red Carpet Flush' makes the consumer feel part of the inner circle.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: The Empire Mechanism (NEW) -->
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">The Empire Mechanism</h2>
+    <div class="content-area">
+        <p style="text-align: center; margin-bottom: 40px;">How we convert "Fame" into "Finance"</p>
+        <div class="tiled-content">
+            <div class="tile" style="border-top: 4px solid #000;">
+                <h3>1. The Dream</h3>
+                <p><strong>Angie on Red Carpet</strong></p>
+                <p>Consumer thinks: <br><em>"I want that life."</em></p>
+            </div>
+            <div class="tile" style="border-top: 4px solid #666;">
+                <h3>2. The Trust</h3>
+                <p><strong>The "Doctor" Title</strong></p>
+                <p>Consumer thinks: <br><em>"It's not magic, it's science."</em></p>
+            </div>
+            <div class="tile" style="border-top: 4px solid #D4AF37; transform: scale(1.05); background: #FFF;">
+                <h3>3. The Purchase</h3>
+                <p><strong>The $50 Product</strong></p>
+                <p>Consumer thinks: <br><em>"I'm buying the secret."</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: The Financial Truth -->
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">The "Why" (Valuation Gap)</h2>
+    <div class="content-area">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">We are shifting you from a <strong>Time Economy</strong> (Doctor) to a <strong>Brand Economy</strong> (Icon).</p>
+        <div class="highlight-numbers-layout">
+            <div>
+                <div class="number-label">Service Business</div>
+                <div class="number" style="color: #666;">1x</div>
+                <p>Revenue Valuation<br>(Clinics)</p>
+            </div>
+            <div style="border-color: #D4AF37; background: #FFF;">
+                <div class="number-label" style="color: #D4AF37;">Product Brand</div>
+                <div class="number">8x</div>
+                <p>Revenue Valuation<br>(Ecosystem)</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; font-style: italic;">"Do you want a $10M exit or a $100M exit?"</p>
+    </div>
+</div>
+
+<!-- Slide 9: A Day in the Life -->
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">A Day in the Empire</h2>
+    <div class="content-area">
+        <div class="timeline-layout">
+            <div class="timeline-item">
+                <h3>09:00 AM (Paris)</h3>
+                <p>You post a Reel from Fashion Week.<br><em>(Haute Couture)</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>09:05 AM (Global)</h3>
+                <p>5,000 women swipe up to buy "The Red Carpet Flush".<br><em>(The Perfume)</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>02:00 PM (Riyadh)</h3>
+                <p>50 VIPs visit Kassabie Labs for the treatment they saw online.<br><em>(Prêt-à-Porter)</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>08:00 PM (Cannes)</h3>
+                <p>You attend the Gala Dinner as Guest of Honor.<br><em>(The Legend Grows)</em></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Closing -->
+<div class="slide-container" id="slide10">
+    <div class="content-area">
+        <div class="quote-layout">
+            <blockquote>"We are not building a clinic.<br>We are building a House."</blockquote>
+            <cite>The Kassabie Conglomerate</cite>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
