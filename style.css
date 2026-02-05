@@ -33,6 +33,151 @@ body.dashboard-page {
     place-items: unset;
 }
 
+/* GLOBAL NAVIGATION */
+.global-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    height: 70px;
+    /* Specific height for layout stability */
+}
+
+/* Adjust body padding so fixed nav doesn't cover content */
+body:not(.dashboard-page) {
+    padding-top: 100px;
+}
+
+.global-nav .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--charcoal);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.global-nav .nav-brand span {
+    color: var(--gold);
+}
+
+.global-nav .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-nav .nav-links a {
+    text-decoration: none;
+    color: var(--light-grey);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.global-nav .nav-links a:hover,
+.global-nav .nav-links a.active {
+    color: var(--gold);
+}
+
+.global-nav .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+}
+
+/* Mobile Nav Toggle */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--charcoal);
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .global-nav {
+        padding: 10px 20px;
+        height: 60px;
+    }
+
+    body:not(.dashboard-page) {
+        padding-top: 80px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .global-nav .nav-links {
+        position: absolute;
+        top: 60px;
+        /* Height of nav */
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 2px solid var(--gold);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .global-nav .nav-links.open {
+        max-height: 350px;
+    }
+
+    .global-nav .nav-links li {
+        width: 100%;
+    }
+
+    .global-nav .nav-links a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #FAFAFA;
+        color: var(--charcoal);
+        font-size: 14px;
+    }
+
+    .global-nav .nav-links a.active::after {
+        display: none;
+        /* No underline on mobile, just color */
+    }
+
+    .global-nav .nav-links a:hover {
+        background-color: #FAFAFA;
+    }
+}
+
+
 /* TYPOGRAPHY */
 h1,
 h2,
