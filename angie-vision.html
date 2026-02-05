@@ -124,6 +124,11 @@ body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-column
 .concept-box p { font-size: 22px; color: #666; }
 .arrow-right { font-size: 30px; color: #D4AF37; margin-top: 20px; }
 
+/* Two Column Standard */
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; height: 100%; }
+.image-wrapper { height: 400px; width: 100%; overflow: hidden; }
+.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
     </style>
 </head>
 <body>
@@ -257,8 +262,71 @@ body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-column
     </div>
 </div>
 
-<!-- Slide 8: The Financial Truth -->
-<div class="slide-container" id="slide8">
+<!-- Slide 8: Media Execution (NEW) -->
+<div class="slide-container bleed-image-layout" id="slide8">
+    <div class="content-container">
+        <h2 class="slide-title">Media Execution</h2>
+        <h3>Strategy: "Voyeurism as Marketing"</h3>
+        <p>We stop "teaching" and start "showing."</p>
+        <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+            <p><strong>The Tactic:</strong> Don't post "5 Tips for Weight Loss."</p>
+            <p style="margin-top: 15px;"><strong>Post:</strong> "Me backstage at Cannes fixing [Star's] dress fit using my 72-hour protocol."</p>
+            <p style="margin-top: 15px; color: #666; font-size: 18px;"><em>Psychology: We market the lifestyle, the product is just the souvenir.</em></p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=Behind+The+Velvet+Rope" alt="Candid backstage photo of Dr Angie">
+    </div>
+</div>
+
+<!-- Slide 9: Hall of Fame Execution (NEW) -->
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Hall of Fame Execution</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>The "Pre-Gala" Authority</h3>
+                <p>We do not attend to be seen. We attend to work.</p>
+                <div style="background: #FAFAFA; padding: 25px; border: 1px solid #E0E0E0; margin-top: 20px;">
+                    <h4 style="margin: 0 0 10px 0; color: #D4AF37; font-family: 'Playfair Display';">The Activation:</h4>
+                    <p style="font-size: 24px; margin-bottom: 5px;"><strong>"The Kassabie Recovery Suite"</strong></p>
+                    <p style="font-size: 16px; color: #666;">Locations: Hôtel Martinez (Cannes), The Mark (Met Gala)</p>
+                </div>
+                <p style="margin-top: 20px;"><strong>The Goal:</strong> Press credits not for the dress, but for the <em>body</em> inside the dress.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://placehold.co/800x600/222/D4AF37?text=The+Recovery+Suite+Setup" alt="Luxury hotel suite setup as clinic">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 10: Owned IP Execution (NEW) -->
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">Owned IP: "The Fixer"</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+             <div class="tile">
+                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                <h3>The Concept</h3>
+                <p>A Reality-Docu series. "72 Hours to fix a Superstar's Biology."</p>
+            </div>
+             <div class="tile">
+                <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                <h3>The Pitch</h3>
+                <p>Targeting Netflix MENA / Shahid.<br><em>"The Kardashians meets Dr. House."</em></p>
+            </div>
+             <div class="tile">
+                <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                <h3>The Sale</h3>
+                <p>Episodes are "Shoppable." <br>The problem on screen is solved by a Product link.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: The Financial Truth -->
+<div class="slide-container" id="slide11">
     <h2 class="slide-title">The "Why" (Valuation Gap)</h2>
     <div class="content-area">
         <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">We are shifting you from a <strong>Time Economy</strong> (Doctor) to a <strong>Brand Economy</strong> (Icon).</p>
@@ -278,8 +346,8 @@ body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-column
     </div>
 </div>
 
-<!-- Slide 9: A Day in the Life -->
-<div class="slide-container" id="slide9">
+<!-- Slide 12: A Day in the Life -->
+<div class="slide-container" id="slide12">
     <h2 class="slide-title">A Day in the Empire</h2>
     <div class="content-area">
         <div class="timeline-layout">
@@ -303,8 +371,8 @@ body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-column
     </div>
 </div>
 
-<!-- Slide 10: Closing -->
-<div class="slide-container" id="slide10">
+<!-- Slide 13: Closing -->
+<div class="slide-container" id="slide13">
     <div class="content-area">
         <div class="quote-layout">
             <blockquote>"We are not building a clinic.<br>We are building a House."</blockquote>
