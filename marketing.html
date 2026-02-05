@@ -1,343 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Marketing Strategy 2026 - Kassabie Conglomerate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-/* 1. THE SETUP - "Clinical Luxury" Theme */
-* { box-sizing: border-box; }
-body { background-color: #F5F5F7; display: grid; gap: 20px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 20px 0; place-items: center; }
-
-.slide-container {
-  align-items: flex-start;
-  background-color: #FFFFFF;
-  border: 1px solid #E0E0E0;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  gap: 40px;
-  height: 720px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 60px;
-  position: relative;
-  width: 1280px;
-}
-
-/* 1.1 BACKGROUND STYLING */
-.slide-container::before {
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-image: radial-gradient(#E0E0E0 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.3;
-  z-index: 0;
-}
-
-/* Gold Accent Line */
-.slide-container::after {
-  background: #D4AF37;
-  top: 0;
-  content: '';
-  height: 8px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
-.slide-container > * { position: relative; z-index: 1; }
-
-/* 2. TYPOGRAPHY */
-.slide-container h1, .slide-container h2, .slide-container h3, .slide-container .quote-layout blockquote {
-  color: #111;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  margin: 0;
-  letter-spacing: -0.5px;
-}
-
-.slide-container h1 span, .slide-container h2 span, .slide-container strong, .slide-container .number, .slide-container cite {
-  color: #D4AF37;
-  font-weight: 600;
-}
-
-.slide-container p, .slide-container li, .slide-container .subtitle, .slide-container .number-label {
-  color: #444;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.slide-container h1 { font-size: 72px; line-height: 1.1; }
-.slide-title { font-size: 48px; margin-bottom: 20px; width: 100%; border-bottom: 1px solid #EEE; padding-bottom: 20px; }
-.slide-container h3 { font-size: 26px; margin-bottom: 15px; }
-.slide-container p { font-size: 20px; }
-
-/* 3. LAYOUTS */
-.content-area { width: 100%; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
-
-/* Title Slide */
-.title-layout { text-align: center; align-self: center; max-width: 900px; background: rgba(255,255,255,0.95); padding: 60px; border: 1px solid #F0F0F0; }
-.title-layout .subtitle { font-size: 22px; margin-top: 30px; color: #666; letter-spacing: 3px; text-transform: uppercase; font-weight: 500; }
-
-/* Bleed Image */
-.slide-container.bleed-image-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; align-items: start; gap: 0; }
-.slide-container.bleed-image-layout > .content-container { padding: 80px; display: flex; flex-direction: column; justify-content: center; height: 100%; background: #FFF; }
-.slide-container.bleed-image-layout > .image-container { height: 100%; width: 100%; }
-.bleed-image-side { height: 720px; width: 100%; object-fit: cover; }
-
-/* Highlight Numbers */
-.highlight-numbers-layout { display: flex; width: 100%; justify-content: center; gap: 40px; align-items: center; }
-.highlight-numbers-layout > div { text-align: center; flex: 1; padding: 40px; background: #FAFAFA; border: 1px solid #EAEAEA; }
-.highlight-numbers-layout .number { font-size: 60px; line-height: 1; margin-bottom: 20px; }
-.highlight-numbers-layout .number-label { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
-
-/* Timeline (Day in Life) */
-.timeline-layout { display: flex; justify-content: space-between; position: relative; width: 100%; margin-top: 40px; }
-.timeline-layout::before { content: ''; position: absolute; top: 20px; left: 0; width: 100%; height: 1px; background: #CCC; z-index: 0; }
-.timeline-item { position: relative; z-index: 1; width: 22%; text-align: center; }
-.timeline-item::before { content: ''; display: block; width: 16px; height: 16px; background: #FFF; border-radius: 50%; margin: 12px auto 20px auto; border: 4px solid #D4AF37; box-shadow: 0 0 0 4px #FFF; }
-.timeline-item h3 { color: #000; font-size: 18px; margin-bottom: 10px; font-weight: 700; }
-.timeline-item p { font-size: 16px; color: #555; }
-
-/* Tiled Content (Pyramid) */
-.tiled-content { display: flex; gap: 30px; width: 100%; }
-.tile { background: #FAFAFA; border: 1px solid #EAEAEA; padding: 40px 30px; flex: 1; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-.tile .icon { font-size: 40px; color: #D4AF37; margin-bottom: 20px; }
-.tile ul { list-style: none; padding: 0; margin-top: 15px; }
-.tile li { font-size: 16px; margin-bottom: 10px; padding-left: 20px; position: relative; }
-.tile li::before { content: '•'; color: #D4AF37; position: absolute; left: 0; font-weight: bold; }
-
-/* Two Column Standard */
-.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; height: 100%; }
-.image-wrapper { height: 400px; width: 100%; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-
-/* Quote Layout */
-.quote-layout blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    color: #111;
-    text-align: center;
-    line-height: 1.2;
-    margin: 0;
-    padding: 0 40px;
-}
-
-.quote-layout cite {
-    display: block;
-    margin-top: 40px;
-    font-size: 20px;
-    color: #D4AF37;
-    font-style: normal;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Slide 1: Title -->
-<div class="slide-container" id="slide1">
-    <div class="title-layout">
-        <p style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">Marketing Strategy 2026</p>
-        <h1>The 360°<br><span>Domination</span></h1>
-        <p class="subtitle">PR • Social Media • Influencer Gifting • Red Carpet</p>
-    </div>
-</div>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <a href="index.html" class="nav-brand">
+            <span>Kassabie</span> Conglomerate
+        </a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angie-vision.html">Vision</a></li>
+            <li><a href="business-plan.html">Business Plan</a></li>
+            <li><a href="Organization-structure.html">Org Structure</a></li>
+            <li><a href="marketing.html" class="active">Marketing</a></li>
+        </ul>
+    </nav>
 
-<!-- Slide 2: The Core Pillars -->
-<div class="slide-container" id="slide2">
-    <h2 class="slide-title">The Strategic Trinity</h2>
-    <div class="content-area">
-        <div class="tiled-content">
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
-                <h3>1. Fame (PR)</h3>
-                <p><strong>Goal:</strong> Authority.</p>
-                <ul>
-                    <li>Red Carpet Activations</li>
-                    <li>Tier 1 Magazine Features</li>
-                    <li>"The Fixer" Reality IP</li>
-                </ul>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
-                <h3>2. Virality (Digital)</h3>
-                <p><strong>Goal:</strong> Trust.</p>
-                <ul>
-                    <li>Myth-Busting Content</li>
-                    <li>Backstage Lifestyle Reels</li>
-                    <li>Viral TikTok Challenges</li>
-                </ul>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-gift"></i></div>
-                <h3>3. Desire (Seeding)</h3>
-                <p><strong>Goal:</strong> Social Proof.</p>
-                <ul>
-                    <li>"Trojan Horse" Gifting</li>
-                    <li>The "White Glove" Unboxing</li>
-                    <li>Celebrity Validation</li>
-                </ul>
-            </div>
+    <!-- Slide 1: Title -->
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <p
+                style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">
+                Marketing Strategy 2026</p>
+            <h1>The 360°<br><span>Domination</span></h1>
+            <p class="subtitle">PR • Social Media • Influencer Gifting • Red Carpet</p>
         </div>
     </div>
-</div>
 
-<!-- Slide 3: PR Strategy -->
-<div class="slide-container bleed-image-layout" id="slide3">
-    <div class="image-container">
-        <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=The+Velvet+Rope+PR" alt="Paparazzi photography of red carpet event">
-    </div>
-    <div class="content-container">
-        <h2 class="slide-title">PR Strategy: "The Velvet Rope"</h2>
-        <h3>The Shift</h3>
-        <p>We stop pitching "Nutrition Tips." We start pitching **"The Secret Weapon."**</p>
-        <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
-            <p><strong>The Angle:</strong> "Dr. Angie isn't a doctor you visit; she is a destination you are invited to."</p>
-            <p style="margin-top: 15px;"><strong>Tactics:</strong></p>
-            <ul>
-                <li><strong>The Recovery Suite:</strong> Pop-up clinics inside the main hotels at Cannes & The Met Gala.</li>
-                <li><strong>Blackout Dates:</strong> Intentionally closing clinics during Fashion Weeks to signal high demand.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<!-- Slide 4: Influencer Strategy -->
-<div class="slide-container" id="slide4">
-    <h2 class="slide-title">Influencer Seeding: "The Trojan Horse"</h2>
-    <div class="content-area">
-        <div class="two-column">
-            <div>
-                <h3>The "White Glove" Box</h3>
-                <p>We do not pay for posts. We create an unboxing experience so expensive, they <em>have</em> to post.</p>
-                <div style="background: #FAFAFA; padding: 20px; margin-top: 20px; border: 1px solid #E0E0E0;">
-                    <h4 style="margin: 0 0 10px 0;">The Kit Contains:</h4>
+    <!-- Slide 2: The Core Pillars -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title">The Strategic Trinity</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3>1. Fame (PR)</h3>
+                    <p><strong>Goal:</strong> Authority.</p>
                     <ul>
-                        <li>1x Personalized "Red Carpet Flush" Kit.</li>
-                        <li>1x Hand-written note on heavy cardstock (Gold Ink).</li>
-                        <li>1x "Emergency" Vial (Collagen Shot).</li>
+                        <li>Red Carpet Activations</li>
+                        <li>Tier 1 Magazine Features</li>
+                        <li>"The Fixer" Reality IP</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>2. Virality (Digital)</h3>
+                    <p><strong>Goal:</strong> Trust.</p>
+                    <ul>
+                        <li>Myth-Busting Content</li>
+                        <li>Backstage Lifestyle Reels</li>
+                        <li>Viral TikTok Challenges</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>3. Desire (Seeding)</h3>
+                    <p><strong>Goal:</strong> Social Proof.</p>
+                    <ul>
+                        <li>"Trojan Horse" Gifting</li>
+                        <li>The "White Glove" Unboxing</li>
+                        <li>Celebrity Validation</li>
                     </ul>
                 </div>
             </div>
-            <div class="image-wrapper">
-                <img src="https://placehold.co/600x600/FAFAFA/D4AF37?text=Luxury+PR+Box" alt="High end luxury PR box open on marble table">
-            </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 5: Digital Content Strategy -->
-<div class="slide-container" id="slide5">
-    <h2 class="slide-title">Digital Strategy: "Voyeurism"</h2>
-    <div class="content-area">
-        <div class="tiled-content">
-            <div class="tile" style="flex: 1.5;">
-                <h3>The "Feed" Aesthetic</h3>
-                <p><strong>70% Lifestyle / 30% Education</strong></p>
-                <p>People follow to see the *Life*, they buy to get the *Result*.</p>
-                <ul style="margin-top: 20px;">
-                    <li><strong>Do:</strong> Angie stepping out of a jet with her supplement case.</li>
-                    <li><strong>Don't:</strong> A graphic of a food pyramid.</li>
+    <!-- Slide 3: PR Strategy -->
+    <div class="slide-container bleed-image-layout" id="slide3">
+        <div class="image-container">
+            <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=The+Velvet+Rope+PR"
+                alt="Paparazzi photography of red carpet event">
+        </div>
+        <div class="content-container">
+            <h2 class="slide-title">PR Strategy: "The Velvet Rope"</h2>
+            <h3>The Shift</h3>
+            <p>We stop pitching "Nutrition Tips." We start pitching **"The Secret Weapon."**</p>
+            <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+                <p><strong>The Angle:</strong> "Dr. Angie isn't a doctor you visit; she is a destination you are
+                    invited
+                    to."</p>
+                <p style="margin-top: 15px;"><strong>Tactics:</strong></p>
+                <ul>
+                    <li><strong>The Recovery Suite:</strong> Pop-up clinics inside the main hotels at Cannes & The
+                        Met
+                        Gala.</li>
+                    <li><strong>Blackout Dates:</strong> Intentionally closing clinics during Fashion Weeks to
+                        signal
+                        high demand.</li>
                 </ul>
             </div>
-            <div class="tile" style="flex: 1; background: #111; color: #FFF;">
-                <h3 style="color: #D4AF37; border-color: #333;">The Viral Hook</h3>
-                <p style="color: #CCC;">"Stop drinking Celery Juice. It's lying to you."</p>
-                <p style="color: #CCC; margin-top: 15px;">Controversial, scientific truth-bombs that trigger the algorithm.</p>
-            </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 6: The Marketing Calendar -->
-<div class="slide-container" id="slide6">
-    <h2 class="slide-title">The Global "Beat" (Calendar)</h2>
-    <div class="content-area">
-        <div class="timeline-layout">
-            <div class="timeline-item">
-                <h3>JAN - MAR</h3>
-                <p style="color: #D4AF37; font-weight: 600;">"The Reset"</p>
-                <p style="font-size: 14px;">Focus: Detox & Weight Loss.</p>
-                <p style="font-size: 14px;">Event: Davos / World Govt Summit.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>APR - JUN</h3>
-                <p style="color: #D4AF37; font-weight: 600;">"Red Carpet Ready"</p>
-                <p style="font-size: 14px;">Focus: Depuffing & Glow.</p>
-                <p style="font-size: 14px;">Event: Cannes Film Festival.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>JUL - SEP</h3>
-                <p style="color: #D4AF37; font-weight: 600;">"Summer Body"</p>
-                <p style="font-size: 14px;">Focus: Hydration & Maintenance.</p>
-                <p style="font-size: 14px;">Event: Paris Fashion Week.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>OCT - DEC</h3>
-                <p style="color: #D4AF37; font-weight: 600;">"The Social Season"</p>
-                <p style="font-size: 14px;">Focus: Energy & Recovery.</p>
-                <p style="font-size: 14px;">Event: Red Sea Film Fest / F1.</p>
+    <!-- Slide 4: Influencer Strategy -->
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">Influencer Seeding: "The Trojan Horse"</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <h3>The "White Glove" Box</h3>
+                    <p>We do not pay for posts. We create an unboxing experience so expensive, they <em>have</em> to
+                        post.</p>
+                    <div style="background: #FAFAFA; padding: 20px; margin-top: 20px; border: 1px solid #E0E0E0;">
+                        <h4 style="margin: 0 0 10px 0;">The Kit Contains:</h4>
+                        <ul>
+                            <li>1x Personalized "Red Carpet Flush" Kit.</li>
+                            <li>1x Hand-written note on heavy cardstock (Gold Ink).</li>
+                            <li>1x "Emergency" Vial (Collagen Shot).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/600x600/FAFAFA/D4AF37?text=Luxury+PR+Box"
+                        alt="High end luxury PR box open on marble table">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 7: Budget & KPIs -->
-<div class="slide-container" id="slide7">
-    <h2 class="slide-title">Investment & Returns</h2>
-    <div class="content-area">
-        <div class="highlight-numbers-layout">
-            <div>
-                <div class="number-label">Budget Allocation</div>
-                <div class="number" style="font-size: 40px; color: #D4AF37;">$500k</div>
-                <ul style="text-align: left; margin-top: 20px; font-size: 14px;">
-                    <li>40% Content Production (Video/Team)</li>
-                    <li>30% PR Retainers & Events</li>
-                    <li>20% Influencer Seeding (Product Cost)</li>
-                    <li>10% Paid Social Ads</li>
-                </ul>
-            </div>
-            <div style="background: #FFF; border-color: #D4AF37;">
-                <div class="number-label">Target KPI: Reach</div>
-                <div class="number">5M+</div>
-                <p>Monthly Impressions across all channels.</p>
-            </div>
-            <div>
-                <div class="number-label">Target KPI: ROAS</div>
-                <div class="number">4.5x</div>
-                <p>Return on Ad Spend for Product Sales.</p>
+    <!-- Slide 5: Digital Content Strategy -->
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">Digital Strategy: "Voyeurism"</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile" style="flex: 1.5;">
+                    <h3>The "Feed" Aesthetic</h3>
+                    <p><strong>70% Lifestyle / 30% Education</strong></p>
+                    <p>People follow to see the *Life*, they buy to get the *Result*.</p>
+                    <ul style="margin-top: 20px;">
+                        <li><strong>Do:</strong> Angie stepping out of a jet with her supplement case.</li>
+                        <li><strong>Don't:</strong> A graphic of a food pyramid.</li>
+                    </ul>
+                </div>
+                <div class="tile" style="flex: 1; background: #111; color: #FFF;">
+                    <h3 style="color: #D4AF37; border-color: #333;">The Viral Hook</h3>
+                    <p style="color: #CCC;">"Stop drinking Celery Juice. It's lying to you."</p>
+                    <p style="color: #CCC; margin-top: 15px;">Controversial, scientific truth-bombs that trigger the
+                        algorithm.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 8: Closing -->
-<div class="slide-container" id="slide8">
-    <div class="content-area">
-        <div class="quote-layout">
-            <blockquote>"We don't chase trends. We engineer biology."</blockquote>
-            <cite>Dr. Angie Kassabie</cite>
+    <!-- Slide 6: The Marketing Calendar -->
+    <div class="slide-container" id="slide6">
+        <h2 class="slide-title">The Global "Beat" (Calendar)</h2>
+        <div class="content-area">
+            <div class="timeline-layout">
+                <div class="timeline-item">
+                    <h3>JAN - MAR</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"The Reset"</p>
+                    <p style="font-size: 14px;">Focus: Detox & Weight Loss.</p>
+                    <p style="font-size: 14px;">Event: Davos / World Govt Summit.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>APR - JUN</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"Red Carpet Ready"</p>
+                    <p style="font-size: 14px;">Focus: Depuffing & Glow.</p>
+                    <p style="font-size: 14px;">Event: Cannes Film Festival.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>JUL - SEP</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"Summer Body"</p>
+                    <p style="font-size: 14px;">Focus: Hydration & Maintenance.</p>
+                    <p style="font-size: 14px;">Event: Paris Fashion Week.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>OCT - DEC</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"The Social Season"</p>
+                    <p style="font-size: 14px;">Focus: Energy & Recovery.</p>
+                    <p style="font-size: 14px;">Event: Red Sea Film Fest / F1.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
+    <!-- Slide 7: Budget & KPIs -->
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title">Investment & Returns</h2>
+        <div class="content-area">
+            <div class="highlight-numbers-layout">
+                <div>
+                    <div class="number-label">Budget Allocation</div>
+                    <div class="number" style="font-size: 40px; color: #D4AF37;">$500k</div>
+                    <ul style="text-align: left; margin-top: 20px; font-size: 14px;">
+                        <li>40% Content Production (Video/Team)</li>
+                        <li>30% PR Retainers & Events</li>
+                        <li>20% Influencer Seeding (Product Cost)</li>
+                        <li>10% Paid Social Ads</li>
+                    </ul>
+                </div>
+                <div style="background: #FFF; border-color: #D4AF37;">
+                    <div class="number-label">Target KPI: Reach</div>
+                    <div class="number">5M+</div>
+                    <p>Monthly Impressions across all channels.</p>
+                </div>
+                <div>
+                    <div class="number-label">Target KPI: ROAS</div>
+                    <div class="number">4.5x</div>
+                    <p>Return on Ad Spend for Product Sales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Closing -->
+    <div class="slide-container" id="slide8">
+        <div class="content-area">
+            <div class="quote-layout">
+                <blockquote>"We don't chase trends. We engineer biology."</blockquote>
+                <cite>Dr. Angie Kassabie</cite>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>
