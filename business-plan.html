@@ -1,690 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Kassabie Conglomerate - Strategic Business Plan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-/* 1. THE SETUP - "Clinical Luxury" / "Medical Fashion House" (White/Gold/Black) */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #F5F5F7; /* High-end Off-White/Light Grey */
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  margin: 0;
-  min-height: 100vh;
-  padding: 20px 0;
-  place-items: center;
-}
-
-.slide-container {
-  align-items: flex-start;
-  background-color: #FFFFFF; /* Pristine White */
-  border: 1px solid #E0E0E0;
-  border-radius: 0; /* Sharp corners for clinical precision */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); /* Soft, diffuse shadow */
-  display: flex;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  gap: 40px;
-  height: 720px;
-  justify-content: center;
-  overflow: hidden;
-  padding: 60px;
-  position: relative;
-  width: 1280px;
-}
-
-/* 1.1 BACKGROUND STYLING */
-
-/* Subtle Geometric/Medical Pattern */
-.slide-container::before {
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-image: radial-gradient(#E0E0E0 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.3;
-  z-index: 0;
-}
-
-/* Gold Accent Line (Top instead of Bottom for 'Header' feel) */
-.slide-container::after {
-  background: #D4AF37; /* Solid Luxury Gold */
-  top: 0;
-  content: '';
-  height: 8px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
-
-.slide-container > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* 2. CONSISTENT TYPOGRAPHY */
-
-/* Headings Font - Playfair Display */
-
-.slide-container h1,
-.slide-container h2,
-.slide-container h3,
-.slide-container h4 {
-  color: #111; /* Deep Black */
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  margin: 0;
-  letter-spacing: -0.5px;
-}
-
-.slide-container h1 span,
-.slide-container h2 span,
-.slide-container strong {
-  color: #D4AF37; /* Gold */
-  font-weight: 600;
-}
-
-/* Body Text Font - Montserrat */
-
-.slide-container p,
-.slide-container .subtitle,
-.slide-container li,
-.slide-container td,
-.slide-container th,
-.slide-container .label {
-  color: #444; /* Dark Grey for readability */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400; /* Slightly heavier than before for white bg */
-}
-
-/* Consistent Font Sizes */
-
-.slide-container h1 {
-  font-size: 72px;
-  line-height: 1.1;
-  color: #000;
-}
-
-.slide-container .slide-title {
-  font-size: 48px;
-  margin-bottom: 20px;
-  width: 100%;
-  border-bottom: 1px solid #EEE;
-  padding-bottom: 20px;
-  color: #000;
-}
-
-.slide-container h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 20px; /* Editorial style subheads */
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.slide-container p {
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.slide-container li {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-
-/* 3. LAYOUT DEFINITIONS */
-
-.content-area {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Title Slide */
-.title-layout {
-  text-align: center;
-  align-self: center;
-  max-width: 900px;
-  background: rgba(255,255,255,0.9);
-  padding: 60px;
-  border: 1px solid #F0F0F0;
-}
-
-.title-layout .subtitle {
-  font-size: 22px;
-  margin-top: 30px;
-  color: #666;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* Section Title */
-.section-title-layout {
-  text-align: center;
-  width: 100%;
-}
-
-.section-title-layout hr {
-  border: 0;
-  height: 2px;
-  background: #D4AF37;
-  width: 100px;
-  margin: 30px auto;
-}
-
-/* Two Column */
-.two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.two-column.tiled {
-    align-items: stretch;
-}
-
-.two-column.tiled > div {
-    background: #FAFAFA; /* Very light grey tile */
-    padding: 40px;
-    border: 1px solid #EAEAEA;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-}
-
-/* Image Right */
-.image-wrapper {
-  border-radius: 0px;
-  overflow: hidden;
-  border: 0;
-  height: 400px;
-  width: 100%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-container img {
-  object-fit: cover; /* Override for Bleed layout */
-}
-
-/* Tiled Content */
-.tiled-content {
-  display: flex;
-  gap: 30px;
-  width: 100%;
-}
-
-.tile {
-  background: #FAFAFA;
-  border: 1px solid #EAEAEA;
-  padding: 40px 30px;
-  flex: 1;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-}
-
-.tile .icon {
-  font-size: 40px;
-  color: #D4AF37;
-  margin-bottom: 20px;
-}
-
-/* Timeline */
-.timeline-layout {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.timeline-layout::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #CCC;
-  z-index: 0;
-}
-
-.timeline-item {
-  position: relative;
-  z-index: 1;
-  width: 22%;
-  text-align: center;
-}
-
-.timeline-item::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 16px;
-  background: #FFF;
-  border-radius: 50%; /* Circle dots */
-  margin: 12px auto 20px auto;
-  border: 4px solid #D4AF37;
-  box-shadow: 0 0 0 4px #FFF; /* Gap effect */
-}
-
-.timeline-item h3 {
-  color: #000;
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.timeline-item p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Charts */
-.chart-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.doughnut-chart {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.legend {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-}
-
-.legend li {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: #333;
-}
-
-.legend .color-box {
-    width: 20px;
-    height: 20px;
-    margin-right: 15px;
-    border-radius: 0px;
-}
-
-/* Bleed Image Layout Adjustment */
-.slide-container.bleed-image-layout {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  padding: 0;
-  align-items: start;
-  gap: 0;
-}
-
-.slide-container.bleed-image-layout > .content-container {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    background: #FFF;
-}
-
-.slide-container.bleed-image-layout > .image-container {
-    height: 100%;
-    width: 100%;
-}
-
-.bleed-image-side {
-    height: 720px;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Quote Layout */
-.quote-layout blockquote {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    color: #111;
-    text-align: center;
-    line-height: 1.2;
-    margin: 0;
-    padding: 0 40px;
-}
-
-.quote-layout cite {
-    display: block;
-    margin-top: 40px;
-    font-size: 20px;
-    color: #D4AF37;
-    font-style: normal;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-/* Bar Chart */
-.bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-}
-.bar .label {
-    width: 150px;
-    text-align: right;
-    margin-right: 20px;
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-}
-.bar-inner {
-    flex-grow: 1;
-    background: #F0F0F0;
-    height: 50px;
-    border-radius: 0px;
-    overflow: hidden;
-}
-.bar-fill {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 10px;
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Slide 1: Title Slide -->
-<div class="slide-container" id="slide1">
-    <div class="title-layout">
-        <p style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">Strategic Business Plan 2026–2029</p>
-        <h1>The Kassabie<br><span>Conglomerate</span></h1>
-        <p class="subtitle">Building the World's First Medical Fashion House</p>
-    </div>
-</div>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <a href="index.html" class="nav-brand">
+            <span>Kassabie</span> Conglomerate
+        </a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angie-vision.html">Vision</a></li>
+            <li><a href="business-plan.html" class="active">Business Plan</a></li>
+            <li><a href="Organization-structure.html">Org Structure</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+        </ul>
+    </nav>
 
-<!-- Slide 2: Vision - The Market Gap -->
-<div class="slide-container" id="slide2">
-    <h2 class="slide-title">The Market Opportunity</h2>
-    <div class="content-area">
-        <div class="two-column tiled">
-            <div>
-                <h3 style="color: #666;">The Current Landscape</h3>
-                <p>The market is bifurcated. On one side, <strong>Clinical Health</strong> is sterile and uninspiring. On the other, <strong>Influencer Wellness</strong> lacks scientific rigor and trust.</p>
-                <hr style="border: 0; border-top: 1px solid #EEE; margin: 20px 0;">
-                <p style="font-size: 16px; color: #888;">Result: High Net Worth Individuals have no brand that reflects their status <em>and</em> solves their biology.</p>
-            </div>
-            <div style="background: #FDFDFD; border-color: #D4AF37;">
-                <h3 style="color: #000;">The Kassabie Solution</h3>
-                <p><strong>Clinical Luxury.</strong> We bridge the gap by offering the scientific precision of a medical clinic with the aspiration and aesthetic of a luxury fashion house.</p>
-                <hr style="border: 0; border-top: 1px solid #D4AF37; margin: 20px 0;">
-                <p style="font-size: 16px; color: #D4AF37; font-weight: 500;">Result: "La Prairie" for internal health.</p>
+    <!-- Slide 1: Title Slide -->
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <p
+                style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">
+                Strategic Business Plan 2026–2029</p>
+            <h1>The Kassabie<br><span>Conglomerate</span></h1>
+            <p class="subtitle">Building the World's First Medical Fashion House</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Vision - The Market Gap -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title">The Market Opportunity</h2>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3 style="color: #666;">The Current Landscape</h3>
+                    <p>The market is bifurcated. On one side, <strong>Clinical Health</strong> is sterile and
+                        uninspiring. On the other, <strong>Influencer Wellness</strong> lacks scientific rigor and
+                        trust.</p>
+                    <hr style="border: 0; border-top: 1px solid #EEE; margin: 20px 0;">
+                    <p style="font-size: 16px; color: #888;">Result: High Net Worth Individuals have no brand that
+                        reflects their status <em>and</em> solves their biology.</p>
+                </div>
+                <div style="background: #FDFDFD; border-color: #D4AF37;">
+                    <h3 style="color: #000;">The Kassabie Solution</h3>
+                    <p><strong>Clinical Luxury.</strong> We bridge the gap by offering the scientific precision of a
+                        medical clinic with the aspiration and aesthetic of a luxury fashion house.</p>
+                    <hr style="border: 0; border-top: 1px solid #D4AF37; margin: 20px 0;">
+                    <p style="font-size: 16px; color: #D4AF37; font-weight: 500;">Result: "La Prairie" for internal
+                        health.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 3: Persona Strategy -->
-<div class="slide-container bleed-image-layout" id="slide3">
-    <div class="content-container">
-        <h2 class="slide-title">The Dual Persona Strategy</h2>
-        <div style="display: flex; flex-direction: column; gap: 40px;">
-            <div>
-                <h3>Avatar A: The Truth Teller</h3>
-                <p style="font-size: 18px;"><em>Target: Mass Market (Social Media)</em><br>
-                High-energy, myth-busting content that builds <strong>Trust & Virality</strong>. Drives traffic to mass-market products.</p>
+    <!-- Slide 3: Persona Strategy -->
+    <div class="slide-container bleed-image-layout" id="slide3">
+        <div class="content-container">
+            <h2 class="slide-title">The Dual Persona Strategy</h2>
+            <div style="display: flex; flex-direction: column; gap: 40px;">
+                <div>
+                    <h3>Avatar A: The Truth Teller</h3>
+                    <p style="font-size: 18px;"><em>Target: Mass Market (Social Media)</em><br>
+                        High-energy, myth-busting content that builds <strong>Trust & Virality</strong>. Drives traffic
+                        to mass-market products.</p>
+                </div>
+                <div>
+                    <h3>Avatar B: The Alchemist</h3>
+                    <p style="font-size: 18px;"><em>Target: Elite & Investors (Red Carpet)</em><br>
+                        Mysterious, scientific, and unreachable. "Sterile Chic." Builds <strong>Brand Value & Pricing
+                            Power</strong>.</p>
+                </div>
             </div>
-            <div>
-                <h3>Avatar B: The Alchemist</h3>
-                <p style="font-size: 18px;"><em>Target: Elite & Investors (Red Carpet)</em><br>
-                Mysterious, scientific, and unreachable. "Sterile Chic." Builds <strong>Brand Value & Pricing Power</strong>.</p>
+        </div>
+        <div class="image-container">
+            <img class="bleed-image-side" src="https://placehold.co/600x800/222/D4AF37?text=The+Clinical+Alchemist"
+                alt="Dr. Angie in a high-fashion medical lab setting">
+        </div>
+    </div>
+
+    <!-- Slide 4: The Ecosystem -->
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">The Closed-Loop Ecosystem</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-camera-flash"></i></div>
+                    <h3>1. Media House</h3>
+                    <p><strong>Top of Funnel</strong><br>Reality IP ("The Fixer"), Red Carpet Prep, and Podcast tours
+                        create mass awareness and aspiration.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>2. Kassabie Labs</h3>
+                    <p><strong>The Physical Anchor</strong><br>Luxury franchise clinics collect biological data and
+                        validate the "Angie Method" with VVIPs.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-box-open"></i></div>
+                    <h3>3. Product Lines</h3>
+                    <p><strong>The Revenue Engine</strong><br>Data-backed protocols (Nutricosmetics) sold globally. High
+                        margin, infinite scale.</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="image-container">
-        <img class="bleed-image-side" src="https://placehold.co/600x800/222/D4AF37?text=The+Clinical+Alchemist" alt="Dr. Angie in a high-fashion medical lab setting">
-    </div>
-</div>
 
-<!-- Slide 4: The Ecosystem -->
-<div class="slide-container" id="slide4">
-    <h2 class="slide-title">The Closed-Loop Ecosystem</h2>
-    <div class="content-area">
-        <div class="tiled-content">
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-camera-flash"></i></div>
-                <h3>1. Media House</h3>
-                <p><strong>Top of Funnel</strong><br>Reality IP ("The Fixer"), Red Carpet Prep, and Podcast tours create mass awareness and aspiration.</p>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-flask"></i></div>
-                <h3>2. Kassabie Labs</h3>
-                <p><strong>The Physical Anchor</strong><br>Luxury franchise clinics collect biological data and validate the "Angie Method" with VVIPs.</p>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-box-open"></i></div>
-                <h3>3. Product Lines</h3>
-                <p><strong>The Revenue Engine</strong><br>Data-backed protocols (Nutricosmetics) sold globally. High margin, infinite scale.</p>
+    <!-- Slide 5: Product Strategy -->
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">Product Strategy: Clinical Luxury</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <h3>The "Hero" Protocols</h3>
+                    <p>We move away from generic vitamins to <strong>Event-Based Solutions</strong>.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 25px;">
+                            <strong><i class="fa-solid fa-star" style="color:#D4AF37; margin-right: 10px;"></i> The Red
+                                Carpet Flush</strong><br>
+                            <span style="font-size: 16px; color: #666;">A 3-day rapid detox kit designed to drop water
+                                weight before major events.</span>
+                        </li>
+                        <li style="margin-bottom: 25px;">
+                            <strong><i class="fa-solid fa-plane" style="color:#D4AF37; margin-right: 10px;"></i> The
+                                Jet-Lag Eraser</strong><br>
+                            <span style="font-size: 16px; color: #666;">Travel protocol for the business elite. Sold in
+                                airport luxury retail.</span>
+                        </li>
+                        <li>
+                            <strong><i class="fa-solid fa-droplet" style="color:#D4AF37; margin-right: 10px;"></i>
+                                Liquid Silk</strong><br>
+                            <span style="font-size: 16px; color: #666;">Ingestible beauty (Collagen/HA) positioned as
+                                high-end skincare.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/800x600/FAFAFA/D4AF37?text=Luxury+Nutricosmetics"
+                        alt="Premium white and gold supplement packaging">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Slide 5: Product Strategy -->
-<div class="slide-container" id="slide5">
-    <h2 class="slide-title">Product Strategy: Clinical Luxury</h2>
-    <div class="content-area">
-        <div class="two-column">
-            <div>
-                <h3>The "Hero" Protocols</h3>
-                <p>We move away from generic vitamins to <strong>Event-Based Solutions</strong>.</p>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 25px;">
-                        <strong><i class="fa-solid fa-star" style="color:#D4AF37; margin-right: 10px;"></i> The Red Carpet Flush</strong><br>
-                        <span style="font-size: 16px; color: #666;">A 3-day rapid detox kit designed to drop water weight before major events.</span>
-                    </li>
-                    <li style="margin-bottom: 25px;">
-                        <strong><i class="fa-solid fa-plane" style="color:#D4AF37; margin-right: 10px;"></i> The Jet-Lag Eraser</strong><br>
-                        <span style="font-size: 16px; color: #666;">Travel protocol for the business elite. Sold in airport luxury retail.</span>
+    <!-- Slide 6: Franchise Model -->
+    <div class="slide-container" id="slide6">
+        <h2 class="slide-title">Franchise: Kassabie Labs</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile" style="flex: 1.5; padding: 0; overflow: hidden; border: 0;">
+                    <img src="https://placehold.co/800x600/F5F5F7/333?text=The+Wellness+Lounge"
+                        style="width: 100%; height: 100%; object-fit: cover;" alt="Luxury wellness clinic interior">
+                </div>
+                <div class="tile"
+                    style="flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                    <h3>The "Wellness Lounge"</h3>
+                    <p>Rebranding "Angie's Kitchen" to a high-end experience center.</p>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Zone A:</strong> Bio-Bar (Functional Luxury Food)</li>
+                        <li><strong>Zone B:</strong> The Audit (Clinical Testing)</li>
+                        <li><strong>Zone C:</strong> Retail Gallery</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 16px; color: #D4AF37; font-weight: 600;">Target Markets:
+                        Riyadh, Doha, London.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Media Strategy - Red Carpet -->
+    <div class="slide-container bleed-image-layout" id="slide7">
+        <div class="image-container">
+            <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=The+Red+Carpet+Moment"
+                alt="Red carpet paparazzi flash photography">
+        </div>
+        <div class="content-container">
+            <h2 class="slide-title">The "Pre-Gala" Authority</h2>
+            <p>We do not attend events just to be seen. We attend to <strong>validate the product</strong>.</p>
+            <div style="margin-top: 30px;">
+                <h3>The Strategy</h3>
+                <p>Position Dr. Angie as the architect behind the star's look. "The dress fits because of the Angie
+                    Protocol."</p>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3>The Activation</h3>
+                <p><strong>"The Kassabie Recovery Suite"</strong> at Cannes & The Met Gala. Providing IV drips and 'Red
+                    Carpet Flush' kits to A-list talent 72 hours pre-event.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Roadmap Year 1 -->
+    <div class="slide-container" id="slide8">
+        <h2 class="slide-title">Year 1: Foundation & Launch</h2>
+        <div class="content-area">
+            <div class="timeline-layout">
+                <div class="timeline-item">
+                    <h3>Q1: Rebrand</h3>
+                    <p>Launch "Sterile Chic" visual identity. Hire Media House team. Audit existing clinics.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Q2: Hero Launch</h3>
+                    <p><strong>Cannes Activation.</strong> Launch "The Red Carpet Flush" (DTC). Pre-order waitlist.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Q3: Franchise</h3>
+                    <p>Sign GCC Master Franchise (Riyadh/Qatar). Finalize Operations Manual ("The Codex").</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Q4: Expansion</h3>
+                    <p>Launch "Angie OS" App Beta. Red Sea Film Festival Gala Dinner. Close Series A.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Roadmap Year 2 & 3 -->
+    <div class="slide-container" id="slide9">
+        <h2 class="slide-title">Scaling & Global Authority</h2>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3>Year 2: Ecosystem Scale</h3>
+                    <ul>
+                        <li><strong>Retail Entry:</strong> "Liquid Silk" in Sephora ME & Ounass.</li>
+                        <li><strong>Physical:</strong> Grand Opening of Kassabie Labs Riyadh.</li>
+                        <li><strong>Media:</strong> "The Fixer" Reality Show Premiere.</li>
+                        <li><strong>Product:</strong> Launch "Metabolic Fire".</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Year 3: Global Exit</h3>
+                    <ul>
+                        <li><strong>Westward Expansion:</strong> Entry into US/UK Markets (London Flagship).</li>
+                        <li><strong>Retail:</strong> Partnership with Harrods/Erewhon.</li>
+                        <li><strong>Legacy:</strong> Publish "The Biology of Glamour" book.</li>
+                        <li><strong>Finance:</strong> Series B or Strategic Partial Exit.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Financials - Use of Funds -->
+    <div class="slide-container" id="slide10">
+        <h2 class="slide-title">Investment Ask: Series A</h2>
+        <div class="content-area">
+            <div class="chart-container">
+                <div class="doughnut-chart"
+                    style="background: conic-gradient(#D4AF37 0% 40%, #000 40% 70%, #999 70% 90%, #EEE 90% 100%); border-radius: 50%;">
+                </div>
+                <ul class="legend">
+                    <li>
+                        <div class="color-box" style="background: #D4AF37;"></div> 40% Product Inventory & Supply Chain
                     </li>
                     <li>
-                        <strong><i class="fa-solid fa-droplet" style="color:#D4AF37; margin-right: 10px;"></i> Liquid Silk</strong><br>
-                        <span style="font-size: 16px; color: #666;">Ingestible beauty (Collagen/HA) positioned as high-end skincare.</span>
+                        <div class="color-box" style="background: #000;"></div> 30% Global Media & Brand Building
+                    </li>
+                    <li>
+                        <div class="color-box" style="background: #999;"></div> 20% Operations & Franchise Team
+                    </li>
+                    <li>
+                        <div class="color-box" style="background: #EEE; border:1px solid #CCC;"></div> 10% Tech (App
+                        Development)
                     </li>
                 </ul>
             </div>
-            <div class="image-wrapper">
-                <img src="https://placehold.co/800x600/FAFAFA/D4AF37?text=Luxury+Nutricosmetics" alt="Premium white and gold supplement packaging">
-            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: #666;">Target Raise: $5M - $10M
+            </p>
         </div>
     </div>
-</div>
 
-<!-- Slide 6: Franchise Model -->
-<div class="slide-container" id="slide6">
-    <h2 class="slide-title">Franchise: Kassabie Labs</h2>
-    <div class="content-area">
-        <div class="tiled-content">
-            <div class="tile" style="flex: 1.5; padding: 0; overflow: hidden; border: 0;">
-                <img src="https://placehold.co/800x600/F5F5F7/333?text=The+Wellness+Lounge" style="width: 100%; height: 100%; object-fit: cover;" alt="Luxury wellness clinic interior">
-            </div>
-            <div class="tile" style="flex: 1; display: flex; flex-direction: column; justify-content: center; text-align: left;">
-                <h3>The "Wellness Lounge"</h3>
-                <p>Rebranding "Angie's Kitchen" to a high-end experience center.</p>
-                <ul style="padding-left: 20px;">
-                    <li><strong>Zone A:</strong> Bio-Bar (Functional Luxury Food)</li>
-                    <li><strong>Zone B:</strong> The Audit (Clinical Testing)</li>
-                    <li><strong>Zone C:</strong> Retail Gallery</li>
-                </ul>
-                <p style="margin-top: 20px; font-size: 16px; color: #D4AF37; font-weight: 600;">Target Markets: Riyadh, Doha, London.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Slide 7: Media Strategy - Red Carpet -->
-<div class="slide-container bleed-image-layout" id="slide7">
-    <div class="image-container">
-        <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=The+Red+Carpet+Moment" alt="Red carpet paparazzi flash photography">
-    </div>
-    <div class="content-container">
-        <h2 class="slide-title">The "Pre-Gala" Authority</h2>
-        <p>We do not attend events just to be seen. We attend to <strong>validate the product</strong>.</p>
-        <div style="margin-top: 30px;">
-            <h3>The Strategy</h3>
-            <p>Position Dr. Angie as the architect behind the star's look. "The dress fits because of the Angie Protocol."</p>
-        </div>
-        <div style="margin-top: 30px;">
-            <h3>The Activation</h3>
-            <p><strong>"The Kassabie Recovery Suite"</strong> at Cannes & The Met Gala. Providing IV drips and 'Red Carpet Flush' kits to A-list talent 72 hours pre-event.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Slide 8: Roadmap Year 1 -->
-<div class="slide-container" id="slide8">
-    <h2 class="slide-title">Year 1: Foundation & Launch</h2>
-    <div class="content-area">
-        <div class="timeline-layout">
-            <div class="timeline-item">
-                <h3>Q1: Rebrand</h3>
-                <p>Launch "Sterile Chic" visual identity. Hire Media House team. Audit existing clinics.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Q2: Hero Launch</h3>
-                <p><strong>Cannes Activation.</strong> Launch "The Red Carpet Flush" (DTC). Pre-order waitlist.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Q3: Franchise</h3>
-                <p>Sign GCC Master Franchise (Riyadh/Qatar). Finalize Operations Manual ("The Codex").</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Q4: Expansion</h3>
-                <p>Launch "Angie OS" App Beta. Red Sea Film Festival Gala Dinner. Close Series A.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Slide 9: Roadmap Year 2 & 3 -->
-<div class="slide-container" id="slide9">
-    <h2 class="slide-title">Scaling & Global Authority</h2>
-    <div class="content-area">
-        <div class="two-column tiled">
-            <div>
-                <h3>Year 2: Ecosystem Scale</h3>
-                <ul>
-                    <li><strong>Retail Entry:</strong> "Liquid Silk" in Sephora ME & Ounass.</li>
-                    <li><strong>Physical:</strong> Grand Opening of Kassabie Labs Riyadh.</li>
-                    <li><strong>Media:</strong> "The Fixer" Reality Show Premiere.</li>
-                    <li><strong>Product:</strong> Launch "Metabolic Fire".</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Year 3: Global Exit</h3>
-                <ul>
-                    <li><strong>Westward Expansion:</strong> Entry into US/UK Markets (London Flagship).</li>
-                    <li><strong>Retail:</strong> Partnership with Harrods/Erewhon.</li>
-                    <li><strong>Legacy:</strong> Publish "The Biology of Glamour" book.</li>
-                    <li><strong>Finance:</strong> Series B or Strategic Partial Exit.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Slide 10: Financials - Use of Funds -->
-<div class="slide-container" id="slide10">
-    <h2 class="slide-title">Investment Ask: Series A</h2>
-    <div class="content-area">
-        <div class="chart-container">
-            <div class="doughnut-chart" style="background: conic-gradient(#D4AF37 0% 40%, #000 40% 70%, #999 70% 90%, #EEE 90% 100%); border-radius: 50%;"></div>
-            <ul class="legend">
-                <li><div class="color-box" style="background: #D4AF37;"></div> 40% Product Inventory & Supply Chain</li>
-                <li><div class="color-box" style="background: #000;"></div> 30% Global Media & Brand Building</li>
-                <li><div class="color-box" style="background: #999;"></div> 20% Operations & Franchise Team</li>
-                <li><div class="color-box" style="background: #EEE; border:1px solid #CCC;"></div> 10% Tech (App Development)</li>
-            </ul>
-        </div>
-        <p style="text-align: center; margin-top: 30px; font-style: italic; color: #666;">Target Raise: $5M - $10M</p>
-    </div>
-</div>
-
-<!-- Slide 11: Revenue Mix Shift -->
-<div class="slide-container" id="slide11">
-    <h2 class="slide-title">Projected Revenue Mix Shift</h2>
-    <div class="content-area">
-        <div style="width: 80%; margin: 0 auto;">
-            <div class="bar">
-                <div class="label">Year 1</div>
-                <div class="bar-inner" style="display: flex;">
-                    <div style="width: 70%; background: #E0E0E0; height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">70% Service</div>
-                    <div style="width: 30%; background: #D4AF37; height: 100%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 14px;">30% Product</div>
+    <!-- Slide 11: Revenue Mix Shift -->
+    <div class="slide-container" id="slide11">
+        <h2 class="slide-title">Projected Revenue Mix Shift</h2>
+        <div class="content-area">
+            <div style="width: 80%; margin: 0 auto;">
+                <div class="bar">
+                    <div class="label">Year 1</div>
+                    <div class="bar-inner" style="display: flex;">
+                        <div
+                            style="width: 70%; background: #E0E0E0; height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">
+                            70% Service</div>
+                        <div
+                            style="width: 30%; background: #D4AF37; height: 100%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 14px;">
+                            30% Product</div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="label">Year 3</div>
+                    <div class="bar-inner" style="display: flex;">
+                        <div
+                            style="width: 40%; background: #E0E0E0; height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">
+                            40% Service</div>
+                        <div
+                            style="width: 60%; background: #D4AF37; height: 100%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 14px;">
+                            60% Product</div>
+                    </div>
                 </div>
             </div>
-            <div class="bar">
-                <div class="label">Year 3</div>
-                <div class="bar-inner" style="display: flex;">
-                    <div style="width: 40%; background: #E0E0E0; height: 100%; display: flex; align-items: center; justify-content: center; color: #555; font-size: 14px;">40% Service</div>
-                    <div style="width: 60%; background: #D4AF37; height: 100%; display: flex; align-items: center; justify-content: center; color: #000; font-weight: bold; font-size: 14px;">60% Product</div>
-                </div>
+            <p style="text-align: center; margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Shifting the business model from <strong>Service (1x Valuation)</strong> to <strong>Product IP (8x
+                    Valuation)</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Slide 12: Closing -->
+    <div class="slide-container" id="slide12">
+        <div class="content-area">
+            <div class="quote-layout">
+                <blockquote>"We are not just building a clinic. We are engineering the biology of the world's most
+                    influential people."</blockquote>
+                <cite>Dr. Angie Kassabie</cite>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Shifting the business model from <strong>Service (1x Valuation)</strong> to <strong>Product IP (8x Valuation)</strong>.</p>
     </div>
-</div>
-
-<!-- Slide 12: Closing -->
-<div class="slide-container" id="slide12">
-    <div class="content-area">
-        <div class="quote-layout">
-            <blockquote>"We are not just building a clinic. We are engineering the biology of the world's most influential people."</blockquote>
-            <cite>Dr. Angie Kassabie</cite>
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>

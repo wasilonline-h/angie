@@ -1,273 +1,238 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خطة التسويق المتقدمة 2026 - آنجي قصابيه</title>
-    
+    <title>Global Marketing Strategy 2026 - Kassabie Conglomerate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        rose: {
-                            50: '#FFF1F2', 100: '#FFE4E6', 200: '#FECDD3', 
-                            400: '#FB7185', 500: '#F43F5E', 900: '#881337',
-                        },
-                        brand: { gold: '#D4AF37' }
-                    },
-                    fontFamily: {
-                        serif: ['"Amiri"', 'serif'],
-                        sans: ['"Readex Pro"', 'sans-serif'],
-                    },
-                    boxShadow: { 'glow': '0 0 25px rgba(251, 113, 133, 0.2)' }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(254, 205, 211, 0.4); }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FFF1F2; }
-        ::-webkit-scrollbar-thumb { background: #FB7185; border-radius: 4px; }
-    </style>
-</head>
-<body class="bg-rose-50 text-rose-900 font-sans overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-rose-100 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2 text-rose-900 hover:text-brand-gold transition">
-                <i class="fa-solid fa-arrow-right"></i>
-                <span class="font-bold text-sm">العودة للرئيسية</span>
-            </a>
-            <div class="font-serif text-xl font-bold text-rose-900">آنجي قصابيه | Marketing 2026</div>
-            <div class="hidden md:flex gap-6 text-sm font-medium text-rose-900/80">
-                <a href="#pillar1" class="hover:text-brand-gold transition">الفخامة السريرية</a>
-                <a href="#pillar2" class="hover:text-brand-gold transition">فرس طروادة</a>
-                <a href="#channels" class="hover:text-brand-gold transition">القنوات</a>
-                <a href="#budget" class="hover:text-brand-gold transition">الميزانية</a>
-            </div>
-        </div>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <a href="index.html" class="nav-brand">
+            <span>Kassabie</span> Conglomerate
+        </a>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="angie-vision.html">Vision</a></li>
+            <li><a href="business-plan.html">Business Plan</a></li>
+            <li><a href="Organization-structure.html">Org Structure</a></li>
+            <li><a href="marketing.html" class="active">Marketing</a></li>
+        </ul>
     </nav>
 
-    <main class="pt-24 pb-12">
-        
-        <header class="text-center py-16 px-6 relative">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-rose-200/30 rounded-full blur-[100px] -z-10"></div>
-            <h1 data-aos="fade-up" class="font-serif text-5xl md:text-7xl font-bold mb-4 text-rose-900">خطة التسويق المتقدمة 2026</h1>
-            <p data-aos="fade-up" data-aos-delay="100" class="text-2xl text-brand-gold font-serif italic mb-6">"هوت كوتور البيولوجيا"</p>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-rose-900/70 max-w-2xl mx-auto">استراتيجية تسويقية متعددة الأبعاد: من مركز تغذية إلى نظام بيئي فاخر للعافية.</p>
-        </header>
+    <!-- Slide 1: Title -->
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <p
+                style="color: #D4AF37; text-transform: uppercase; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; font-weight: 600;">
+                Marketing Strategy 2026</p>
+            <h1>The 360°<br><span>Domination</span></h1>
+            <p class="subtitle">PR • Social Media • Influencer Gifting • Red Carpet</p>
+        </div>
+    </div>
 
-        <section id="pillar1" class="py-16 container mx-auto px-6">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-1 h-8 bg-brand-gold"></div>
-                <h2 class="font-serif text-3xl font-bold text-rose-900">الركيزة 1: الفخامة السريرية</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div data-aos="fade-left" class="glass-panel p-8 rounded-2xl">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-flask text-rose-500"></i> سلسلة "كاسر الأساطير"
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="bg-white/50 p-4 rounded-lg border border-rose-100">
-                            <strong class="text-rose-900 block">🎥 الحلقة 1: الكايل</strong>
-                            <p class="text-sm text-gray-600">لماذا يسبب الانتفاخ؟ (سولفورافين + ألياف غير ذائبة)</p>
-                        </div>
-                        <div class="bg-white/50 p-4 rounded-lg border border-rose-100">
-                            <strong class="text-rose-900 block">🎥 الحلقة 2: الفركتوز</strong>
-                            <p class="text-sm text-gray-600">الفركتوز الحر = كبد دهني (60% من المشروبات تحتوي HFCS)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-right" class="glass-panel p-8 rounded-2xl border-brand-gold/30">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-microscope text-brand-gold"></i> المطبخ كصيدلية
-                    </h3>
-                    <ul class="space-y-3 text-sm text-gray-700">
-                        <li class="flex gap-2"><i class="fa-solid fa-check text-rose-400"></i> الطهاة يستخدمون ملاقط طبية للدقة.</li>
-                        <li class="flex gap-2"><i class="fa-solid fa-check text-rose-400"></i> وزن المكونات حتى 0.1 جرام.</li>
-                        <li class="flex gap-2"><i class="fa-solid fa-check text-rose-400"></i> اختبار المكونات العضوية بحثاً عن المبيدات.</li>
+    <!-- Slide 2: The Core Pillars -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title">The Strategic Trinity</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3>1. Fame (PR)</h3>
+                    <p><strong>Goal:</strong> Authority.</p>
+                    <ul>
+                        <li>Red Carpet Activations</li>
+                        <li>Tier 1 Magazine Features</li>
+                        <li>"The Fixer" Reality IP</li>
                     </ul>
-                    <div class="mt-6 p-4 bg-brand-gold/10 rounded-xl text-center font-serif text-rose-900 italic border border-brand-gold/20">
-                        "ليس لدينا مطبخ؛ لدينا فارماكوبيا للطهي."
-                    </div>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>2. Virality (Digital)</h3>
+                    <p><strong>Goal:</strong> Trust.</p>
+                    <ul>
+                        <li>Myth-Busting Content</li>
+                        <li>Backstage Lifestyle Reels</li>
+                        <li>Viral TikTok Challenges</li>
+                    </ul>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>3. Desire (Seeding)</h3>
+                    <p><strong>Goal:</strong> Social Proof.</p>
+                    <ul>
+                        <li>"Trojan Horse" Gifting</li>
+                        <li>The "White Glove" Unboxing</li>
+                        <li>Celebrity Validation</li>
+                    </ul>
                 </div>
             </div>
-            
-            <div data-aos="fade-up" class="bg-rose-900 text-white p-8 rounded-3xl relative overflow-hidden">
-                <div class="absolute right-0 top-0 w-64 h-64 bg-rose-500/20 rounded-full blur-3xl"></div>
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                    <div class="text-center md:text-right flex-1">
-                        <h3 class="text-2xl font-bold mb-2">Angie AI</h3>
-                        <p class="text-rose-200 mb-6">المساعد الرقمي الذكي 24/7</p>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div class="bg-white/10 p-4 rounded-xl backdrop-blur"><div class="font-bold">التقييم</div><div class="text-xs opacity-70">50 سؤال طبي</div></div>
-                            <div class="bg-white/10 p-4 rounded-xl backdrop-blur"><div class="font-bold">التنبؤ</div><div class="text-xs opacity-70">ML للقائمة الأمثل</div></div>
-                            <div class="bg-white/10 p-4 rounded-xl backdrop-blur"><div class="font-bold">التتبع</div><div class="text-xs opacity-70">مستويات الطاقة</div></div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: PR Strategy -->
+    <div class="slide-container bleed-image-layout" id="slide3">
+        <div class="image-container">
+            <img class="bleed-image-side" src="https://placehold.co/600x800/111/D4AF37?text=The+Velvet+Rope+PR"
+                alt="Paparazzi photography of red carpet event">
+        </div>
+        <div class="content-container">
+            <h2 class="slide-title">PR Strategy: "The Velvet Rope"</h2>
+            <h3>The Shift</h3>
+            <p>We stop pitching "Nutrition Tips." We start pitching **"The Secret Weapon."**</p>
+            <div style="margin-top: 30px; border-left: 4px solid #D4AF37; padding-left: 20px;">
+                <p><strong>The Angle:</strong> "Dr. Angie isn't a doctor you visit; she is a destination you are
+                    invited
+                    to."</p>
+                <p style="margin-top: 15px;"><strong>Tactics:</strong></p>
+                <ul>
+                    <li><strong>The Recovery Suite:</strong> Pop-up clinics inside the main hotels at Cannes & The
+                        Met
+                        Gala.</li>
+                    <li><strong>Blackout Dates:</strong> Intentionally closing clinics during Fashion Weeks to
+                        signal
+                        high demand.</li>
+                </ul>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="pillar2" class="py-16 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-1 h-8 bg-rose-500"></div>
-                    <h2 class="font-serif text-3xl font-bold text-rose-900">الركيزة 2: فرس طروادة (المنتج المدخل)</h2>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div data-aos="flip-left" class="md:col-span-1 bg-gradient-to-b from-rose-100 to-white p-8 rounded-2xl border border-rose-200 shadow-glow text-center">
-                        <div class="inline-block bg-rose-500 text-white px-4 py-1 rounded-full text-xs font-bold mb-4">الأكثر مبيعاً</div>
-                        <h3 class="text-2xl font-serif font-bold text-rose-900 mb-2">صندوق السجادة الحمراء</h3>
-                        <div class="text-4xl font-bold text-brand-gold mb-4">$99</div>
-                        <p class="text-sm text-gray-600 mb-6">إزالة الانتفاخ وتحسين البشرة في 3 أيام قبل المناسبات.</p>
-                        <ul class="text-right text-sm space-y-2 mb-8 text-gray-700">
-                            <li>• 3 وجبات يومية (Zero Bloat)</li>
-                            <li>• عصير تطهير الكبد</li>
-                            <li>• مصل فيتامين C</li>
+    <!-- Slide 4: Influencer Strategy -->
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">Influencer Seeding: "The Trojan Horse"</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <h3>The "White Glove" Box</h3>
+                    <p>We do not pay for posts. We create an unboxing experience so expensive, they <em>have</em> to
+                        post.</p>
+                    <div style="background: #FAFAFA; padding: 20px; margin-top: 20px; border: 1px solid #E0E0E0;">
+                        <h4 style="margin: 0 0 10px 0;">The Kit Contains:</h4>
+                        <ul>
+                            <li>1x Personalized "Red Carpet Flush" Kit.</li>
+                            <li>1x Hand-written note on heavy cardstock (Gold Ink).</li>
+                            <li>1x "Emergency" Vial (Collagen Shot).</li>
                         </ul>
-                        <button class="w-full py-3 bg-rose-900 text-white rounded-xl hover:bg-rose-800 transition">اطلب الآن</button>
                     </div>
-
-                    <div class="md:col-span-2 space-y-6">
-                        <div data-aos="fade-left" class="glass-panel p-6 rounded-2xl">
-                            <h4 class="font-bold text-lg mb-2 text-rose-900">شراكات B2B "Powered By"</h4>
-                            <div class="grid grid-cols-3 gap-4 text-sm">
-                                <div class="p-3 bg-rose-50 rounded-lg">
-                                    <strong>الطيران</strong><br><span class="text-xs text-gray-500">قائمة التعافي من الرحلات</span>
-                                </div>
-                                <div class="p-3 bg-rose-50 rounded-lg">
-                                    <strong>الصالات الرياضية</strong><br><span class="text-xs text-gray-500">مخفوق ما بعد التمرين</span>
-                                </div>
-                                <div class="p-3 bg-rose-50 rounded-lg">
-                                    <strong>المنتجعات</strong><br><span class="text-xs text-gray-500">قائمة 500 سعرة</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-left" data-aos-delay="100" class="glass-panel p-6 rounded-2xl border-l-4 border-brand-gold">
-                            <h4 class="font-bold text-lg mb-2 text-rose-900">نموذج Ghost Kitchen</h4>
-                            <p class="text-sm text-gray-600 mb-4">تشغيل "مطبخ آنجي" داخل فنادق 5 نجوم لتقليل التكاليف الرأسمالية (CAPEX).</p>
-                            <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg text-sm">
-                                <span>توزيع الهامش:</span>
-                                <span class="font-bold"><span class="text-gray-400">40% فندق</span> | <span class="text-brand-gold">60% آنجي</span></span>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/600x600/FAFAFA/D4AF37?text=Luxury+PR+Box"
+                        alt="High end luxury PR box open on marble table">
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="channels" class="py-16 container mx-auto px-6">
-            <h2 class="text-center font-serif text-3xl font-bold text-rose-900 mb-12">قنوات التسويق والتوزيع</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div data-aos="zoom-in" class="bg-white p-6 rounded-2xl shadow-sm text-center hover:shadow-glow transition group">
-                    <i class="fa-brands fa-instagram text-4xl text-rose-400 group-hover:scale-110 transition mb-4"></i>
-                    <h4 class="font-bold">Instagram</h4>
-                    <p class="text-xs text-gray-500 mt-2">Reels: كاسر الأساطير<br>هدف: 200K متابع</p>
+    <!-- Slide 5: Digital Content Strategy -->
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">Digital Strategy: "Voyeurism"</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile" style="flex: 1.5;">
+                    <h3>The "Feed" Aesthetic</h3>
+                    <p><strong>70% Lifestyle / 30% Education</strong></p>
+                    <p>People follow to see the *Life*, they buy to get the *Result*.</p>
+                    <ul style="margin-top: 20px;">
+                        <li><strong>Do:</strong> Angie stepping out of a jet with her supplement case.</li>
+                        <li><strong>Don't:</strong> A graphic of a food pyramid.</li>
+                    </ul>
                 </div>
-                <div data-aos="zoom-in" data-aos-delay="50" class="bg-white p-6 rounded-2xl shadow-sm text-center hover:shadow-glow transition group">
-                    <i class="fa-brands fa-tiktok text-4xl text-black group-hover:scale-110 transition mb-4"></i>
-                    <h4 class="font-bold">TikTok</h4>
-                    <p class="text-xs text-gray-500 mt-2">استهداف Gen Z<br>هدف: 500K متابع</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="100" class="bg-white p-6 rounded-2xl shadow-sm text-center hover:shadow-glow transition group">
-                    <i class="fa-brands fa-youtube text-4xl text-red-600 group-hover:scale-110 transition mb-4"></i>
-                    <h4 class="font-bold">YouTube</h4>
-                    <p class="text-xs text-gray-500 mt-2">وثائقيات طويلة<br>يوم في حياة عميلة</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="150" class="bg-white p-6 rounded-2xl shadow-sm text-center hover:shadow-glow transition group">
-                    <i class="fa-brands fa-linkedin text-4xl text-blue-600 group-hover:scale-110 transition mb-4"></i>
-                    <h4 class="font-bold">LinkedIn</h4>
-                    <p class="text-xs text-gray-500 mt-2">مقالات B2B<br>الصحة المؤسسية</p>
+                <div class="tile" style="flex: 1; background: #111; color: #FFF;">
+                    <h3 style="color: #D4AF37; border-color: #333;">The Viral Hook</h3>
+                    <p style="color: #CCC;">"Stop drinking Celery Juice. It's lying to you."</p>
+                    <p style="color: #CCC; margin-top: 15px;">Controversial, scientific truth-bombs that trigger the
+                        algorithm.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="budget" class="py-16 bg-rose-900 text-white">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12">
-                    
-                    <div>
-                        <h2 class="font-serif text-3xl font-bold mb-6">توزيع الميزانية ($500K)</h2>
-                        <div class="bg-white/10 rounded-2xl overflow-hidden backdrop-blur">
-                            <table class="w-full text-sm">
-                                <thead class="bg-rose-800 text-rose-100">
-                                    <tr>
-                                        <th class="p-4 text-right">النشاط</th>
-                                        <th class="p-4 text-left">النسبة</th>
-                                        <th class="p-4 text-left">المبلغ</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-rose-800/50">
-                                    <tr><td class="p-4">إنتاج المحتوى</td><td class="p-4 text-left">30%</td><td class="p-4 text-left font-mono">$150K</td></tr>
-                                    <tr><td class="p-4">الإعلانات (Ads)</td><td class="p-4 text-left">25%</td><td class="p-4 text-left font-mono">$125K</td></tr>
-                                    <tr><td class="p-4">الشراكات</td><td class="p-4 text-left">20%</td><td class="p-4 text-left font-mono">$100K</td></tr>
-                                    <tr><td class="p-4">الفعاليات</td><td class="p-4 text-left">15%</td><td class="p-4 text-left font-mono">$75K</td></tr>
-                                    <tr><td class="p-4">PR وإعلام</td><td class="p-4 text-left">10%</td><td class="p-4 text-left font-mono">$50K</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h2 class="font-serif text-3xl font-bold mb-6">مقاييس النجاح (KPIs)</h2>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-white/10 p-4 rounded-xl text-center border border-white/10">
-                                <div class="text-3xl font-bold text-brand-gold mb-1">< $150</div>
-                                <div class="text-xs opacity-70">تكلفة الاكتساب (CAC)</div>
-                            </div>
-                            <div class="bg-white/10 p-4 rounded-xl text-center border border-white/10">
-                                <div class="text-3xl font-bold text-brand-gold mb-1">40:1</div>
-                                <div class="text-xs opacity-70">LTV:CAC نسبة</div>
-                            </div>
-                            <div class="bg-white/10 p-4 rounded-xl text-center border border-white/10">
-                                <div class="text-3xl font-bold text-brand-gold mb-1">60%</div>
-                                <div class="text-xs opacity-70">معدل الاحتفاظ الشهري</div>
-                            </div>
-                            <div class="bg-white/10 p-4 rounded-xl text-center border border-white/10">
-                                <div class="text-3xl font-bold text-brand-gold mb-1">1.5x</div>
-                                <div class="text-xs opacity-70">المعامل الفيروسي</div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 p-6 bg-brand-gold/20 rounded-xl border border-brand-gold/40">
-                            <h4 class="font-bold mb-2 text-brand-gold">هدف السنة الأولى</h4>
-                            <ul class="text-sm space-y-1">
-                                <li>✓ 1,000 عميل مشترك نشط</li>
-                                <li>✓ $1.54M إيرادات سنوية</li>
-                                <li>✓ 10 شراكات B2B استراتيجية</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- Slide 6: The Marketing Calendar -->
+    <div class="slide-container" id="slide6">
+        <h2 class="slide-title">The Global "Beat" (Calendar)</h2>
+        <div class="content-area">
+            <div class="timeline-layout">
+                <div class="timeline-item">
+                    <h3>JAN - MAR</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"The Reset"</p>
+                    <p style="font-size: 14px;">Focus: Detox & Weight Loss.</p>
+                    <p style="font-size: 14px;">Event: Davos / World Govt Summit.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>APR - JUN</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"Red Carpet Ready"</p>
+                    <p style="font-size: 14px;">Focus: Depuffing & Glow.</p>
+                    <p style="font-size: 14px;">Event: Cannes Film Festival.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>JUL - SEP</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"Summer Body"</p>
+                    <p style="font-size: 14px;">Focus: Hydration & Maintenance.</p>
+                    <p style="font-size: 14px;">Event: Paris Fashion Week.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>OCT - DEC</h3>
+                    <p style="color: #D4AF37; font-weight: 600;">"The Social Season"</p>
+                    <p style="font-size: 14px;">Focus: Energy & Recovery.</p>
+                    <p style="font-size: 14px;">Event: Red Sea Film Fest / F1.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
+    <!-- Slide 7: Budget & KPIs -->
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title">Investment & Returns</h2>
+        <div class="content-area">
+            <div class="highlight-numbers-layout">
+                <div>
+                    <div class="number-label">Budget Allocation</div>
+                    <div class="number" style="font-size: 40px; color: #D4AF37;">$500k</div>
+                    <ul style="text-align: left; margin-top: 20px; font-size: 14px;">
+                        <li>40% Content Production (Video/Team)</li>
+                        <li>30% PR Retainers & Events</li>
+                        <li>20% Influencer Seeding (Product Cost)</li>
+                        <li>10% Paid Social Ads</li>
+                    </ul>
+                </div>
+                <div style="background: #FFF; border-color: #D4AF37;">
+                    <div class="number-label">Target KPI: Reach</div>
+                    <div class="number">5M+</div>
+                    <p>Monthly Impressions across all channels.</p>
+                </div>
+                <div>
+                    <div class="number-label">Target KPI: ROAS</div>
+                    <div class="number">4.5x</div>
+                    <p>Return on Ad Spend for Product Sales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer class="bg-rose-950 text-rose-200 text-center py-8">
-        <p>© 2026 آنجي قصابيه. جميع الحقوق محفوظة.</p>
-    </footer>
+    <!-- Slide 8: Closing -->
+    <div class="slide-container" id="slide8">
+        <div class="content-area">
+            <div class="quote-layout">
+                <blockquote>"We don't chase trends. We engineer biology."</blockquote>
+                <cite>Dr. Angie Kassabie</cite>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-    </script>
 </body>
+
 </html>
