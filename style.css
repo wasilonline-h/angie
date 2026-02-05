@@ -715,8 +715,53 @@ a {
         padding: 30px 20px;
     }
 
-    .title-layout .subtitle {
-        font-size: 16px;
-        line-height: 1.5;
+    /* SCROLL NAVIGATION BUTTONS */
+    .scroll-nav-container {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
     }
-}
+
+    .scroll-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--white);
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        font-size: 18px;
+    }
+
+    .scroll-btn:hover {
+        background: var(--gold);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .scroll-btn:active {
+        transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+        .scroll-nav-container {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .scroll-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
