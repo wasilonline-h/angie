@@ -1,286 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آنجي قصابيه - العرض الاستثماري الكامل | Angie Qassabieh</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        rose: { 50: '#FFF1F2', 100: '#FFE4E6', 200: '#FECDD3', 300: '#FDA4AF', 400: '#FB7185', 500: '#F43F5E', 900: '#881337' },
-                        brand: { gold: '#D4AF37' }
-                    },
-                    fontFamily: {
-                        serif: ['"Amiri"', 'serif'],
-                        sans: ['"Readex Pro"', 'sans-serif'],
-                    },
-                    boxShadow: { 'glow': '0 0 25px rgba(251, 113, 133, 0.2)' }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(254, 205, 211, 0.4); }
-        .icon-circle { background: linear-gradient(135deg, #FFF1F2 0%, #FFFFFF 100%); border: 1px solid #FECDD3; box-shadow: 0 10px 30px -10px rgba(136, 19, 55, 0.1); }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FFF1F2; }
-        ::-webkit-scrollbar-thumb { background: #FB7185; border-radius: 4px; }
-    </style>
-</head>
-<body class="bg-rose-50 text-rose-900 font-sans overflow-x-hidden selection:bg-rose-200 selection:text-rose-900">
-
-    <nav x-data="{ mobileOpen: false }" class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-rose-100 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-serif text-2xl font-bold text-rose-900">آنجي قصابيه</div>
-
-            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-rose-900/80">
-                <a href="#hero" class="hover:text-brand-gold transition">الرئيسية</a>
-                <a href="#products" class="hover:text-brand-gold transition">المنتجات</a>
-                <a href="#marketing" class="hover:text-brand-gold transition text-rose-500 font-bold">التسويق</a> <a href="#partners" class="hover:text-brand-gold transition">التوزيع</a>
-                <a href="#revenue" class="hover:text-brand-gold transition">المالية</a>
-                <button onclick="window.print()" class="text-rose-900 border border-rose-900 px-4 py-1.5 rounded-full hover:bg-rose-900 hover:text-white transition text-xs">طباعة</button>
-            </div>
-
-            <button @click="mobileOpen = !mobileOpen" class="md:hidden z-50 text-rose-900 focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-2xl" x-show="!mobileOpen"></i>
-                <i class="fa-solid fa-xmark text-2xl" x-show="mobileOpen" x-cloak></i>
-            </button>
-        </div>
-
-        <div x-show="mobileOpen" x-collapse class="md:hidden absolute top-full left-0 w-full bg-white border-b border-rose-100 shadow-lg py-4 px-6 flex flex-col gap-3 text-center">
-            <a @click="mobileOpen = false" href="#hero" class="py-2 hover:text-brand-gold">الرئيسية</a>
-            <a @click="mobileOpen = false" href="#products" class="py-2 hover:text-brand-gold">المنتجات</a>
-            <a @click="mobileOpen = false" href="#marketing" class="py-2 font-bold text-rose-500 bg-rose-50 rounded-lg">استراتيجية التسويق</a>
-            <a @click="mobileOpen = false" href="#partners" class="py-2 hover:text-brand-gold">التوزيع</a>
-            <a @click="mobileOpen = false" href="#revenue" class="py-2 hover:text-brand-gold">المالية</a>
-        </div>
-    </nav>
-
-    <main>
-        <section id="hero" class="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-rose-200/40 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-[120px] translate-x-1/3 translate-y-1/3"></div>
-            
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-                <div data-aos="fade-left">
-                    <div class="inline-block px-3 py-1 mb-4 border border-rose-300 rounded-full text-rose-900/70 text-sm bg-white/50">Pitch Deck 2026</div>
-                    <h1 class="font-serif text-5xl md:text-6xl font-bold leading-tight mb-6 text-rose-900">
-                        نموذج العمل المتكامل <br>
-                        <span class="text-brand-gold">للعافية والتغذية</span>
-                    </h1>
-                    <p class="text-lg text-rose-900/70 mb-8 leading-relaxed">
-                        تغذية علاجية • منتجات طبيعية • نمط حياة فاخر.<br>
-                        تحويل الاسم الشخصي إلى مؤسسة صحية متكاملة.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm text-sm">
-                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
-                            <span>عرض مفاهيمي</span>
-                        </div>
-                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm text-sm">
-                            <i class="fa-solid fa-chart-line text-brand-gold"></i>
-                            <span>خطة تسويق كاملة</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div data-aos="fade-right" class="relative">
-                    <div class="relative z-10 rounded-[3rem] overflow-hidden border-4 border-white shadow-glow aspect-[4/5] bg-rose-100">
-                        <img src="https://raw.githubusercontent.com/wasilonline-h/angie/main/angie.png" alt="Dr. Angie Qassabieh" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-brand-gold/50 rounded-[3rem] -z-0"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl font-bold mb-4 text-rose-900">عروض المنتجات والخدمات</h2>
-                    <p class="text-rose-900/60">نهج متكامل للصحة والجمال الطبيعي</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div data-aos="fade-up" class="glass-panel p-8 rounded-2xl shadow-sm hover:shadow-glow border-t-4 border-brand-gold transition-all duration-300">
-                        <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center text-4xl text-brand-gold mx-auto mb-6">
-                            <i class="fa-solid fa-bowl-food"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-center mb-6 text-rose-900">1. المنتجات الغذائية</h3>
-                        <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-brand-gold"></i> وجبات صحية مخصصة</li>
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-brand-gold"></i> وجبات جاهزة (Grab & Go)</li>
-                        </ul>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="100" class="glass-panel p-8 rounded-2xl shadow-sm hover:shadow-glow border-t-4 border-rose-500 transition-all duration-300">
-                        <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center text-4xl text-rose-500 mx-auto mb-6">
-                            <i class="fa-solid fa-spa"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-center mb-6 text-rose-900">2. مستحضرات التجميل</h3>
-                        <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-rose-400"></i> عناية طبيعية 100%</li>
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-rose-400"></i> منتجات "Glow"</li>
-                        </ul>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200" class="glass-panel p-8 rounded-2xl shadow-sm hover:shadow-glow border-t-4 border-brand-gold transition-all duration-300">
-                        <div class="w-20 h-20 icon-circle rounded-full flex items-center justify-center text-4xl text-brand-gold mx-auto mb-6">
-                            <i class="fa-solid fa-user-doctor"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-center mb-6 text-rose-900">3. الخدمات السريرية</h3>
-                        <ul class="space-y-3 text-sm text-gray-600">
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-brand-gold"></i> استشارات تغذية علاجية</li>
-                            <li class="flex gap-2"><i class="fa-solid fa-check text-brand-gold"></i> برامج خسارة الوزن</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="marketing" class="py-24 bg-rose-50 relative border-y border-rose-200">
-            <div class="absolute inset-0 bg-white/40 pointer-events-none"></div>
-            <div class="container mx-auto px-6 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-rose-500 font-bold tracking-widest text-sm uppercase">استراتيجية النمو</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2 text-rose-900">خطة التسويق 2026</h2>
-                    <p class="text-brand-gold font-serif italic text-xl mt-2">"هوت كوتور البيولوجيا"</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 mb-16">
-                    <div data-aos="fade-left" class="bg-white p-8 rounded-2xl shadow-glow">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-2xl">🔬</div>
-                            <h3 class="text-2xl font-serif font-bold text-rose-900">الفخامة السريرية</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-rose-400 pl-4 bg-gray-50 p-4 rounded-r-lg">
-                                <strong class="block text-rose-900 mb-1">سلسلة "كاسر الأساطير"</strong>
-                                <p class="text-sm text-gray-600">تفكيك خرافات التغذية (مثل الكايل والفركتوز) لبناء سلطة علمية.</p>
-                            </div>
-                            <div class="border-l-4 border-brand-gold pl-4 bg-gray-50 p-4 rounded-r-lg">
-                                <strong class="block text-rose-900 mb-1">المطبخ كصيدلية</strong>
-                                <p class="text-sm text-gray-600">استخدام الملاقط والموازين الطبية. "نحن لا نطبخ، نحن نصنع الدواء."</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-right" class="bg-white p-8 rounded-2xl shadow-glow">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-2xl">🐎</div>
-                            <h3 class="text-2xl font-serif font-bold text-rose-900">فرس طروادة</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="bg-gradient-to-r from-rose-50 to-white border border-rose-100 p-4 rounded-xl flex justify-between items-center">
-                                <div>
-                                    <strong class="block text-rose-900">صندوق السجادة الحمراء</strong>
-                                    <p class="text-xs text-gray-500">إزالة الانتفاخ في 3 أيام</p>
-                                </div>
-                                <div class="text-3xl font-bold text-brand-gold">$99</div>
-                            </div>
-                            <div class="bg-gray-50 p-4 rounded-xl">
-                                <strong class="block text-rose-900 mb-1">شراكات B2B</strong>
-                                <p class="text-xs text-gray-600">قوائم طعام في الدرجة الأولى، الصالات الرياضية، والمنتجعات.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-white p-4 rounded-xl text-center shadow-sm">
-                            <i class="fa-brands fa-instagram text-2xl text-rose-500 mb-2"></i>
-                            <div class="font-bold text-sm">200K متابع</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl text-center shadow-sm">
-                            <i class="fa-brands fa-tiktok text-2xl text-black mb-2"></i>
-                            <div class="font-bold text-sm">Gen Z</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl text-center shadow-sm">
-                            <i class="fa-brands fa-linkedin text-2xl text-blue-600 mb-2"></i>
-                            <div class="font-bold text-sm">B2B</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl text-center shadow-sm">
-                            <i class="fa-solid fa-envelope text-2xl text-gray-600 mb-2"></i>
-                            <div class="font-bold text-sm">Newsletter</div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-rose-900 text-white p-6 rounded-2xl">
-                        <h4 class="font-bold mb-4 text-center">الميزانية: $500K</h4>
-                        <div class="space-y-2 text-sm">
-                            <div class="flex justify-between"><span>إنتاج محتوى</span> <span>$150K</span></div>
-                            <div class="w-full h-1 bg-white/20 rounded-full"><div class="w-[30%] h-full bg-brand-gold rounded-full"></div></div>
-                            <div class="flex justify-between pt-2"><span>إعلانات Ads</span> <span>$125K</span></div>
-                            <div class="w-full h-1 bg-white/20 rounded-full"><div class="w-[25%] h-full bg-brand-gold rounded-full"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="partners" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="flex items-center gap-4 mb-12">
-                    <div class="w-1 h-8 bg-rose-400"></div>
-                    <h2 class="font-serif text-3xl font-bold text-rose-900">قنوات التوزيع</h2>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="p-6 border border-rose-100 rounded-xl hover:shadow-glow transition"><i class="fa-solid fa-hospital text-4xl text-rose-200 mb-4"></i><h3 class="font-bold mb-2">القطاع الطبي</h3><p class="text-sm text-gray-500">مستشفيات وصيدليات</p></div>
-                    <div class="p-6 border border-rose-100 rounded-xl hover:shadow-glow transition"><i class="fa-solid fa-cart-shopping text-4xl text-rose-200 mb-4"></i><h3 class="font-bold mb-2">التجزئة</h3><p class="text-sm text-gray-500">سوبر ماركت ومقاهي</p></div>
-                    <div class="p-6 border border-rose-100 rounded-xl hover:shadow-glow transition"><i class="fa-solid fa-building text-4xl text-rose-200 mb-4"></i><h3 class="font-bold mb-2">الأعمال</h3><p class="text-sm text-gray-500">أبراج تجارية ومكاتب</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="revenue" class="py-24 bg-rose-900 text-white relative">
-            <div class="container mx-auto px-6 relative z-10">
-                <h2 class="font-serif text-4xl font-bold text-center mb-16 text-rose-100">كيف يحقق العمل المال؟</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-center mb-20">
-                    <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10"><i class="fa-solid fa-rotate text-4xl text-rose-300 mb-4"></i><h4 class="text-xl font-bold mb-2">اشتراكات</h4><p class="text-sm opacity-80">وجبات شهرية (B2C)</p></div>
-                    <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10"><i class="fa-solid fa-cash-register text-4xl text-brand-gold mb-4"></i><h4 class="text-xl font-bold mb-2">تجزئة</h4><p class="text-sm opacity-80">منتجات (B2B)</p></div>
-                    <div class="bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10"><i class="fa-solid fa-file-signature text-4xl text-rose-300 mb-4"></i><h4 class="text-xl font-bold mb-2">ترخيص</h4><p class="text-sm opacity-80">علامة تجارية</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="expansion" class="py-24 bg-rose-50">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8">
-                        <h2 class="font-serif text-4xl font-bold mb-6 text-rose-900">مراحل التوسع</h2>
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-rose-900 text-white flex items-center justify-center font-bold">1</div><div class="h-full w-px bg-rose-300 my-2"></div></div>
-                            <div class="pb-8"><h3 class="text-xl font-bold text-rose-900">المرحلة 1: التأسيس</h3><p class="text-sm text-gray-600">مركز العافية وبناء الثقة</p></div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="flex flex-col items-center"><div class="w-8 h-8 rounded-full bg-brand-gold text-white flex items-center justify-center font-bold">2</div></div>
-                            <div><h3 class="text-xl font-bold text-rose-900">المرحلة 2: نمط الحياة</h3><p class="text-sm text-gray-600">Angie Café • Gym • Fashion</p></div>
-                        </div>
-                    </div>
-                    <div class="relative rounded-3xl overflow-hidden shadow-glow aspect-video bg-rose-100">
-                        <img src="https://placehold.co/800x600/FFE4E6/881337?text=Lifestyle+Concept" alt="Lifestyle" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-rose-950 text-rose-200 text-center py-8">
-        <p class="font-serif text-lg">آنجي قصابيه</p>
-        <p class="text-sm opacity-60 mt-2">Full Business Deck & Marketing Plan | 2026 ©</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 800, once: true }); </script>
-</body>
-</html>
